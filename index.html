@@ -1,1330 +1,1314 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  <meta charset="UTF-8" />
+  <title>Houston Iftar 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-deep: #0C1B33;
+      --bg-soft: #FFF7EB;
+      --accent-gold: #B8860B;
+      --accent-green: #019000;
+      --text-main: #1F2933;
+      --text-muted: #6B7280;
+      --border-soft: #C6B6A2;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-main);
+      background: #F3F4F6;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(12, 27, 51, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--white);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      background: radial-gradient(circle at 20% 0%, #FACC6B, #B8860B);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gold);
+      color: var(--white);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.7);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top, #1F2937 0, #0C1B33 45%, #050816 100%);
+      color: var(--white);
+      padding: 3.5rem 1.5rem 4.5rem;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: rgba(249, 250, 251, 0.9);
+      max-width: 34rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .pill span.icon {
+      font-size: 0.9rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: rgba(209, 213, 219, 0.9);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.96));
+      border-radius: 1.25rem;
+      padding: 1.25rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.75);
+    }
+
+    .hero-photo {
+      border-radius: 0.9rem;
+      height: 220px;
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.14), rgba(15, 23, 42, 0.9)), url('https://images.pexels.com/photos/5637732/pexels-photo-5637732.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #E5E7EB;
+    }
+
+    .stat-item span {
+      display: block;
+    }
+
+    .stat-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      opacity: 0.7;
+      margin-bottom: 0.1rem;
+    }
+
+    .stat-value {
+      font-weight: 600;
+    }
+
+    /* MAIN SECTIONS */
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.75rem;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.75rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 36rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border-radius: 1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1.25rem 1.35rem;
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .list li {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .list-icon {
+      font-size: 1rem;
+      margin-top: 0.1rem;
+    }
+
+    /* SCHEDULE */
+    .schedule-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      border-radius: 0.9rem;
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+    }
+
+    .schedule-time {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .schedule-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .schedule-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* MAP / VENUE */
+    .map-placeholder {
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+      background: #111827;
+      height: 270px;
+      position: relative;
+      color: #E5E7EB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .map-placeholder span {
+      font-size: 0.9rem;
+      max-width: 18rem;
+    }
+
+    .map-overlay-label {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+    }
+
+    /* TICKETS */
+    .tickets-grid {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .ticket-card {
+      background: #FFFFFF;
+      border-radius: 1rem;
+      border: 1px solid #E5E7EB;
+      padding: 1.3rem 1.35rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .ticket-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .ticket-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .ticket-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .ticket-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .ticket-benefits {
+      list-style: none;
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .ticket-benefits li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--accent-green);
+    }
+
+    .ticket-card .btn {
+      margin-top: auto;
+    }
+
+    .tickets-note {
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* SPONSORS */
+    .sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .sponsor-tile {
+      background: #FFFFFF;
+      border-radius: 0.9rem;
+      border: 1px solid #E5E7EB;
+      padding: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .sponsor-cta {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+
+    /* MERCH */
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .merch-card {
+      background: var(--bg-soft);
+      border-radius: 1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1rem 1.1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .merch-image {
+      border-radius: 0.8rem;
+      height: 140px;
+      background: linear-gradient(135deg, #0C1B33, #B8860B);
+      margin-bottom: 0.4rem;
+    }
+
+    .merch-tag {
+      display: inline-flex;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.04);
+      font-size: 0.75rem;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .faq-item {
+      background: #FFFFFF;
+      border-radius: 0.9rem;
+      border: 1px solid #E5E7EB;
+      padding: 0.9rem 1rem;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .faq-footer {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* SOCIAL & NEWSLETTER */
+    .social-section {
+      background: linear-gradient(135deg, #0C1B33, #111827);
+      border-radius: 1.2rem;
+      padding: 1.6rem 1.5rem;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 380px;
+    }
+
+    .newsletter-form input[type="email"] {
+      padding: 0.65rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .newsletter-small {
+      font-size: 0.8rem;
+      color: rgba(229, 231, 235, 0.9);
+    }
+
+    .social-links {
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .social-row {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(249, 250, 251, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .qr-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.4rem;
+    }
+
+    .qr-card {
+      border-radius: 0.75rem;
+      border: 1px dashed rgba(249, 250, 251, 0.5);
+      padding: 0.6rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    /* CTA STRIPS */
+    .cta-strip {
+      border-radius: 1rem;
+      padding: 1.1rem 1.2rem;
+      background: #0C1B33;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-strip span {
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #9CA3AF;
+      padding: 1.8rem 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 0.9fr));
+      gap: 1.8rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #E5E7EB;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 1.2rem auto 0;
+      border-top: 1px solid rgba(55, 65, 81, 0.95);
+      padding-top: 0.9rem;
+      font-size: 0.78rem;
+      display: flex;
+      justify-content: space-between;
+      color: #6B7280;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav ul {
+        position: absolute;
+        inset: 54px 0 auto;
+        background: rgba(12, 27, 51, 0.98);
+        padding: 0.75rem 1.5rem 1rem;
+        display: none;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      main {
+        padding-inline: 1.25rem;
+      }
+
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .tickets-grid,
+      .sponsors-grid,
+      .merch-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .social-section {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .schedule-item {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        padding-inline: 1.15rem;
+      }
+
+      main {
+        padding-inline: 1.15rem;
+      }
+    }
   </style>
 </head>
 <body>
-<p class="p1"><br></p>
-<p class="p2">&lt;!DOCTYPE html&gt;</p>
-<p class="p2">&lt;html lang="en"&gt;</p>
-<p class="p2">&lt;head&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;title&gt;Houston Iftar 2026&lt;/title&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;!-- Google Fonts --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--bg-deep: #0C1B33;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--bg-soft: #FFF7EB;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--accent-gold: #B8860B;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--accent-green: #019000;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--text-main: #1F2933;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--text-muted: #6B7280;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--border-soft: #C6B6A2;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>--white: #ffffff;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-main);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #F3F4F6;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: inherit;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>img {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 100%;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.page-wrapper {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* NAVBAR */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>position: sticky;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>z-index: 50;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>backdrop-filter: blur(16px);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(12, 27, 51, 0.9);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(255, 255, 255, 0.09);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.nav-container {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 1120px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.logo {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>letter-spacing: 0.03em;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.logo-icon {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>width: 32px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>height: 32px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.35);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at 20% 0%, #FACC6B, #B8860B);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>nav ul {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>nav a {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>opacity: 0.9;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>nav a:hover {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>opacity: 1;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.btn {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.6rem 1.2rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid transparent;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>transition: all 0.2s ease;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.btn-primary {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: var(--accent-gold);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.btn-primary:hover {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>filter: brightness(1.05);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.btn-outline {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: transparent;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-color: rgba(255, 255, 255, 0.7);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.btn-outline:hover {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.08);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.nav-toggle {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 1.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* HERO */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top, #1F2937 0, #0C1B33 45%, #050816 100%);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 3.5rem 1.5rem 4.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-inner {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 1120px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 3rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.badge {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.25rem 0.7rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(15, 118, 110, 0.2);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(34, 197, 94, 0.6);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>letter-spacing: 0.1em;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero h1 {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: clamp(2.2rem, 4vw, 3rem);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-subtitle {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: rgba(249, 250, 251, 0.9);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 34rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-details {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 1.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.pill {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.4rem 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(15, 23, 42, 0.8);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(148, 163, 184, 0.5);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.pill span.icon {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-ctas {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-note {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: rgba(209, 213, 219, 0.9);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-right {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-card {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: linear-gradient(145deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.96));</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(148, 163, 184, 0.45);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>box-shadow: 0 24px 60px rgba(15, 23, 42, 0.75);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-photo {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>height: 220px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, rgba(248, 250, 252, 0.14), rgba(15, 23, 42, 0.9)), url('https://images.pexels.com/photos/5637732/pexels-photo-5637732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200') center/cover;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.hero-stats {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.stat-item span {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.stat-label {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>letter-spacing: 0.12em;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.7rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>opacity: 0.7;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.stat-value {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* MAIN SECTIONS */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 1120px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 2.5rem 1.5rem 3.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 3.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.section-header {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 1.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.section-kicker {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>letter-spacing: 0.16em;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--accent-gold);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.35rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.section-title {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 1.6rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.35rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.section-subtitle {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 36rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.two-column {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: start;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: var(--bg-soft);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.35rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.list {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.list li {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.6rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.list-icon {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 0.1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* SCHEDULE */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.schedule-grid {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.schedule-item {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: 120px minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1rem 1.15rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #FFFFFF;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.schedule-time {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--accent-gold);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.schedule-title {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.2rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.schedule-desc {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* MAP / VENUE */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.map-placeholder {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #111827;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>height: 270px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.map-placeholder span {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 18rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.map-overlay-label {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>top: 0.65rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>left: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.25rem 0.6rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(15, 23, 42, 0.85);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(148, 163, 184, 0.7);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* TICKETS */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.tickets-grid {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(3, minmax(0, 1fr));</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-card {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #FFFFFF;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1.3rem 1.35rem 1.35rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-label {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>letter-spacing: 0.16em;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--accent-gold);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-name {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.15rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-price {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-meta {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-benefits {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.35rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-benefits li::before {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>content: "•";</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-right: 0.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--accent-green);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.ticket-card .btn {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: auto;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.tickets-note {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 0.85rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* SPONSORS */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.sponsors-grid {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(4, minmax(0, 1fr));</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.sponsor-tile {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #FFFFFF;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.85rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.sponsor-cta {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 1.2rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* MERCH */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.merch-grid {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(3, minmax(0, 1fr));</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.merch-card {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: var(--bg-soft);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1rem 1.1rem 1.1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.6rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.merch-image {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>height: 140px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #0C1B33, #B8860B);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.merch-tag {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.25rem 0.6rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(0, 0, 0, 0.04);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* FAQ */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.faq-list {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.faq-item {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #FFFFFF;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.9rem 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.faq-question {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.faq-answer {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.faq-footer {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* SOCIAL &amp; NEWSLETTER */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.social-section {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #0C1B33, #111827);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1.2rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1.6rem 1.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.newsletter-form {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 380px;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.newsletter-form input[type="email"] {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.65rem 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(209, 213, 219, 0.8);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: rgba(15, 23, 42, 0.9);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.newsletter-small {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: rgba(229, 231, 235, 0.9);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.social-links {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.7rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.social-row {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.6rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.social-icon {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>width: 32px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>height: 32px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid rgba(249, 250, 251, 0.7);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.qr-grid {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 0.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.qr-card {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 0.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border: 1px dashed rgba(249, 250, 251, 0.5);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 0.6rem 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* CTA STRIPS */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>.cta-strip {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-radius: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1.1rem 1.2rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #0C1B33;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 1.75rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.cta-strip span {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* FOOTER */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>background: #020617;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: #9CA3AF;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding: 1.8rem 1.5rem 2rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.footer-inner {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 1120px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 0.9fr));</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 1.8rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.footer-title {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: #E5E7EB;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.footer-links {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>.footer-bottom {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>max-width: 1120px;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>margin: 1.2rem auto 0;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(55, 65, 81, 0.95);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>padding-top: 0.9rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>font-size: 0.78rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>color: #6B7280;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>gap: 0.4rem;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>/* RESPONSIVE */</p>
-<p class="p2"><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>nav ul {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>position: absolute;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>inset: 54px 0 auto;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>background: rgba(12, 27, 51, 0.98);</p>
-<p class="p2"><span class="Apple-converted-space">        </span>padding: 0.75rem 1.5rem 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>display: none;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>gap: 0.65rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>nav ul.show {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.nav-toggle {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>display: block;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.hero-inner {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.hero-right {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>order: -1;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>main {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>padding-inline: 1.25rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.two-column {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.tickets-grid,</p>
-<p class="p2"><span class="Apple-converted-space">      </span>.sponsors-grid,</p>
-<p class="p2"><span class="Apple-converted-space">      </span>.merch-grid {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.social-section {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.footer-inner {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>.schedule-item {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>@media (max-width: 500px) {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>.hero {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>padding-inline: 1.15rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>main {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>padding-inline: 1.15rem;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p2">&lt;/head&gt;</p>
-<p class="p2">&lt;body&gt;</p>
-<p class="p2">&lt;div class="page-wrapper"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;div class="nav-container"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="logo-icon"&gt;☾&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;Houston Iftar 2026&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;button class="nav-toggle" aria-label="Toggle navigation"&gt;☰&lt;/button&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;nav&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;ul id="nav-menu"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#schedule"&gt;Schedule&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#venue"&gt;Venue&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#tickets"&gt;Tickets&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#sponsors"&gt;Sponsors&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#faq"&gt;FAQ&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#tickets" class="btn btn-primary"&gt;Get Tickets&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;div class="hero-inner"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="badge"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;span&gt;Community Iftar&lt;/span&gt;&lt;span&gt;•&lt;/span&gt;&lt;span&gt;Ramadan 2026&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h1&gt;Houston Iftar 2026&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="hero-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>An evening of community, culture, and connection near downtown Houston. Join us for a warm welcome hour, Iftar dinner, and congregational prayer.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="hero-details"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="pill"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span class="icon"&gt;📅&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span&gt;Saturday, March 14, 2026&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="pill"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span class="icon"&gt;⏰&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span&gt;Welcome from 5:30 PM • Iftar at 6:30 PM&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="pill"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span class="icon"&gt;📍&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span&gt;Near Downtown Houston, TX&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="hero-ctas"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#tickets" class="btn btn-primary"&gt;Get Tickets&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#sponsors" class="btn btn-outline"&gt;Become a Sponsor&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="hero-note"&gt;Limited capacity. Early bird pricing available.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="hero-right"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="hero-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="hero-photo"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="hero-stats"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="stat-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="stat-label"&gt;Guests&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="stat-value"&gt;300+&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="stat-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="stat-label"&gt;Program&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="stat-value"&gt;Speakers &amp; Entertainment&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="stat-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="stat-label"&gt;Experience&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="stat-value"&gt;Community • Faith • Food&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- About --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;About&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;An evening to break fast together&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Houston Iftar 2026 brings together Muslims and friends of the community for a warm, welcoming Ramadan experience just minutes from downtown.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="two-column"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="margin-bottom: 0.9rem; font-size: 0.95rem;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Share Iftar at long communal tables, hear from local leaders and organizations, and enjoy a program that highlights Houston’s diverse Muslim community.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="margin-bottom: 0.9rem; font-size: 0.95rem;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Whether you are a student, professional, family, or visiting friend, this event is designed to help you connect, reflect, and build lasting relationships.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🤝&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Network with local professionals, students, and organizations from across Greater Houston.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🕌&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Break your fast together and pray in congregation with a dedicated prayer space.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🌙&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Celebrate Ramadan traditions in a modern, welcoming, and family-friendly setting.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;h3 style="font-size: 1rem; margin-bottom: 0.6rem;"&gt;Who you'll meet&lt;/h3&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🏙️&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Young professionals, founders, community leaders, and creatives.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🎓&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;University students and recent graduates looking to grow their network.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;💼&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Nonprofits, masjid reps, and sponsors showcasing resources for the community.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="cta-strip"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;span&gt;Ready to join us this Ramadan?&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;a href="#tickets" class="btn btn-primary"&gt;Reserve your seat&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- Schedule --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="schedule"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;Schedule&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Evening schedule&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Arrive early, stay late, and make the most of the night with a structured yet relaxed flow.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="schedule-grid"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="schedule-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="schedule-time"&gt;5:00 PM&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-title"&gt;Check-in &amp; registration&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-desc"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Doors open, badge pickup, photo backdrop, and light refreshments as guests arrive.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="schedule-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="schedule-time"&gt;5:30 – 6:15 PM&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-title"&gt;Welcome hour &amp; networking&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-desc"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Meet fellow attendees, sponsors, and community leaders with guided introductions and table icebreakers.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="schedule-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="schedule-time"&gt;6:30 PM&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-title"&gt;Iftar dinner&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-desc"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Break your fast with dates and water, followed by a catered dinner featuring local Houston favorites.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="schedule-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="schedule-time"&gt;Maghrib&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-title"&gt;Congregational prayer&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-desc"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Congregational Maghrib prayer led by a local imam, with a dedicated prayer area and wudu facilities.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="schedule-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="schedule-time"&gt;7:30 – 9:00 PM&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-title"&gt;Program &amp; entertainment&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-desc"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Speakers, community spotlights, nasheeds or performances, and interactive segments with sponsors and partners.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="schedule-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="schedule-time"&gt;9:00 PM&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-title"&gt;Closing &amp; hangout&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="schedule-desc"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Closing remarks, du’a, final networking, and time to visit sponsor and community organization tables.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="cta-strip"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;span&gt;Want to see the full lineup of speakers and entertainment?&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;a href="#contact" class="btn btn-outline" style="border-color: #FBBF24;"&gt;Request program details&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- Venue --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="venue"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;Venue&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Near downtown Houston&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Conveniently located just minutes from Houston’s downtown core, with on-site parking and easy rideshare access.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="two-column"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="map-placeholder"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="map-overlay-label"&gt;Map preview&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Embed a live Google Maps view or a screenshot of the venue location here.&lt;br /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Replace this box with your actual map embed code.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div style="margin-top: 0.7rem;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;a href="#" class="btn btn-primary" style="font-size: 0.85rem;"&gt;Open in Google Maps&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;h3 style="font-size: 1rem; margin-bottom: 0.6rem;"&gt;Venue details&lt;/h3&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="font-size: 0.9rem; margin-bottom: 0.65rem;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;strong&gt;Venue name:&lt;/strong&gt; To be announced (near Downtown Houston, TX)</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;ul class="list" style="font-size: 0.9rem;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🚗&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;On-site parking and clear signage for arrival and check-in.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🧕&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Dedicated prayer space with rugs and separate areas as needed.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;👨‍👩‍👧&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Family-friendly seating and accessibility for strollers and wheelchairs.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="list-icon"&gt;🏷️&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;Sponsor booths and community organization tables throughout the venue.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- Tickets --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="tickets"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;Tickets&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Tickets &amp; registration&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Reserve your spot before tickets sell out. Choose the option that best fits you or your group.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="tickets-grid"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="ticket-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-label"&gt;Early bird&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-name"&gt;Individual ticket&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-price"&gt;$XX&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-meta"&gt;Available until February 15, 2026.&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;ul class="ticket-benefits"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Reserved seating in the main hall&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Full Iftar dinner and evening program&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Priority check-in at registration&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#" class="btn btn-primary"&gt;Get early bird ticket&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="ticket-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-label"&gt;Standard&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-name"&gt;General admission&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-price"&gt;$YY&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-meta"&gt;From February 16 until sold out.&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;ul class="ticket-benefits"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Access to Iftar dinner and full program&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Open seating in general admission areas&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Access to sponsors and community booths&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#" class="btn btn-primary"&gt;Get general ticket&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="ticket-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-label"&gt;Group&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-name"&gt;Reserved table&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-price"&gt;$ZZ&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="ticket-meta"&gt;Perfect for organizations, families, or friends.&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;ul class="ticket-benefits"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Reserved table for up to 8 guests&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Recognition during the program (optional)&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;li&gt;Priority access for group check-in&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#" class="btn btn-primary"&gt;Reserve a table&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;p class="tickets-note"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>Student discounts and financial assistance are available. If ticket cost is a barrier, please reach out to our team—we want this evening to be accessible.</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="cta-strip"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;span&gt;Have a question about ticket types or group bookings?&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;a href="#faq" class="btn btn-outline" style="border-color: #FBBF24;"&gt;View ticket FAQs&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- Sponsors --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="sponsors"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;Sponsors&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Sponsors &amp; partners&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Houston Iftar 2026 is supported by local businesses, nonprofits, and community organizations.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="sponsors-grid"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="sponsor-tile"&gt;Sponsor Logo 1&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="sponsor-tile"&gt;Sponsor Logo 2&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="sponsor-tile"&gt;Sponsor Logo 3&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="sponsor-tile"&gt;Sponsor Logo 4&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="sponsor-cta"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Want your brand or organization featured at Houston Iftar 2026? Explore sponsorship options and community partner opportunities.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div style="display:flex; gap:0.6rem; flex-wrap:wrap;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#" class="btn btn-outline" style="border-color:#0F766E; color:#0F766E; background:#ECFEFF;"&gt;Download sponsor deck&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;a href="#contact" class="btn btn-primary"&gt;Talk to the team&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- Merchandise --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="merch"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;Merch&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Limited-edition merchandise&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Take a piece of the evening home with you. Pre-order items when you purchase your ticket.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="merch-grid"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="merch-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="merch-image"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="merch-tag"&gt;T-shirt&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div style="font-weight:600;"&gt;Houston Iftar Tee&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p&gt;Soft neutral tee featuring a minimalist Houston skyline and crescent design with the event date.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="font-size:0.8rem; color:var(--text-muted);"&gt;Pre-orders open soon.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="merch-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="merch-image" style="background:linear-gradient(135deg,#0C1B33,#1F2937);"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="merch-tag"&gt;Mug&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div style="font-weight:600;"&gt;Crescent Mug&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p&gt;Deep blue ceramic mug with gold crescent and lantern pattern, perfect for suhoor or late-night chai.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="font-size:0.8rem; color:var(--text-muted);"&gt;Available in limited quantity.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="merch-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="merch-image" style="background:linear-gradient(135deg,#B8860B,#C6B6A2);"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="merch-tag"&gt;Tote&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div style="font-weight:600;"&gt;Community Tote&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p&gt;Canvas tote with a geometric motif and “Houston Iftar 2026” branding.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="font-size:0.8rem; color:var(--text-muted);"&gt;Add to your ticket at checkout.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="cta-strip"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;span&gt;Want first access when merch drops?&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;a href="#contact" class="btn btn-primary"&gt;Join the merch list&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- FAQ --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="faq"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="section-header"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="section-kicker"&gt;FAQ&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Frequently asked questions&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>Find quick answers about tickets, dress code, family accommodations, and more.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="faq-list"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="faq-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-question"&gt;What is included with my ticket?&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-answer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Every ticket includes access to the venue, Iftar dinner, the full evening program, and congregational prayer facilities.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="faq-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-question"&gt;Is the event family-friendly?&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-answer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Yes. Families and children are welcome, and we aim to provide a comfortable space for guests of all ages.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="faq-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-question"&gt;What should I wear?&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-answer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>We recommend modest, semi-formal or smart casual attire that is comfortable for prayer and photos.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="faq-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-question"&gt;Will there be a prayer space?&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-answer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Yes, there will be a dedicated prayer area with rugs and space for both brothers and sisters.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="faq-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-question"&gt;Are there vegetarian or dietary options?&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-answer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>We plan to offer vegetarian options and can accommodate common dietary needs. Please share details during registration.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="faq-item"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-question"&gt;Can non-Muslim friends attend?&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="faq-answer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Absolutely. Non-Muslim friends and colleagues are welcome to attend and learn more about Ramadan and the community.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="faq-footer"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>Still have questions? &lt;a href="#contact" style="color:#0F766E; font-weight:500;"&gt;Contact the organizing team&lt;/a&gt;.</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;!-- Social / Newsletter --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div class="social-section"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="section-kicker" style="color:#FCD34D;"&gt;Stay connected&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;h2 class="section-title" style="color:#F9FAFB; font-size:1.4rem; margin-bottom:0.4rem;"&gt;Sign up &amp; follow&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;p style="font-size:0.9rem; color:#E5E7EB; max-width:26rem; margin-bottom:0.9rem;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>Get updates on speakers, ticket releases, and future community events hosted around Houston.</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;form class="newsletter-form" onsubmit="event.preventDefault();"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;input type="email" placeholder="Enter your email address" required /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;button type="submit" class="btn btn-primary"&gt;Join newsletter&lt;/button&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;label style="font-size:0.8rem; display:flex; gap:0.4rem; align-items:flex-start;"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;input type="checkbox" style="margin-top:0.15rem; width:14px; height:14px;" /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span class="newsletter-small"&gt;I’m interested in volunteering or sponsoring future events.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/label&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/form&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="social-links"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="social-row"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;div class="social-icon"&gt;IG&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;@houstoniftar (Instagram)&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="social-row"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;div class="social-icon"&gt;TT&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;@houstoniftar (TikTok)&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="social-row"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;div class="social-icon"&gt;✉&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;span&gt;hello@houstoniftar.com&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;div class="qr-grid"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="qr-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;strong&gt;QR • Tickets&lt;/strong&gt;&lt;br /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Add your QR code image here linking directly to the ticketing page.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="qr-card"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>&lt;strong&gt;QR • Instagram&lt;/strong&gt;&lt;br /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">              </span>Add a QR code for your Instagram profile to grow your community.</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;!-- Footer --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;div class="footer-inner"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="footer-title"&gt;Houston Iftar 2026&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>A community-led Ramadan gathering bringing together Muslims and friends of the community for a night of faith, food, and friendship.</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="footer-title"&gt;Quick links&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;ul class="footer-links"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#schedule"&gt;Schedule&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#tickets"&gt;Tickets&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#sponsors"&gt;Sponsors&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#faq"&gt;FAQ&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="footer-title"&gt;Contact&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;ul class="footer-links"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;Email: hello@houstoniftar.com&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span>&lt;li&gt;Location: Near Downtown Houston, Texas&lt;/li&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;span&gt;© 2026 Houston Iftar. All rights reserved.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;span&gt;Designed for a warm, welcoming community experience.&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2">&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;script&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>const toggle = document.querySelector('.nav-toggle');</p>
-<p class="p2"><span class="Apple-converted-space">  </span>const navMenu = document.getElementById('nav-menu');</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>toggle.addEventListener('click', () =&gt; {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>navMenu.classList.toggle('show');</p>
-<p class="p2"><span class="Apple-converted-space">  </span>});</p>
-<p class="p2">&lt;/script&gt;</p>
-<p class="p2">&lt;/body&gt;</p>
-<p class="p2">&lt;/html&gt;</p>
+<div class="page-wrapper">
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">☾</div>
+        <div>
+          <div>Houston Iftar 2026</div>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#tickets">Tickets</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#tickets" class="btn btn-primary">Get Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="badge">
+          <span>Community Iftar</span><span>•</span><span>Ramadan 2026</span>
+        </div>
+        <h1>Houston Iftar 2026</h1>
+        <p class="hero-subtitle">
+          An evening of community, culture, and connection near downtown Houston. Join us for a warm welcome hour, Iftar dinner, and congregational prayer.
+        </p>
+
+        <div class="hero-details">
+          <div class="pill">
+            <span class="icon">📅</span>
+            <span>Saturday, March 14, 2026</span>
+          </div>
+          <div class="pill">
+            <span class="icon">⏰</span>
+            <span>Welcome from 5:30 PM • Iftar at 6:30 PM</span>
+          </div>
+          <div class="pill">
+            <span class="icon">📍</span>
+            <span>Near Downtown Houston, TX</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#tickets" class="btn btn-primary">Get Tickets</a>
+          <a href="#sponsors" class="btn btn-outline">Become a Sponsor</a>
+        </div>
+        <p class="hero-note">Limited capacity. Early bird pricing available.</p>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-photo"></div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-label">Guests</span>
+              <span class="stat-value">300+</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Program</span>
+              <span class="stat-value">Speakers & Entertainment</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Experience</span>
+              <span class="stat-value">Community • Faith • Food</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- About -->
+    <section id="about">
+      <div class="section-header">
+        <div class="section-kicker">About</div>
+        <h2 class="section-title">An evening to break fast together</h2>
+        <p class="section-subtitle">
+          Houston Iftar 2026 brings together Muslims and friends of the community for a warm, welcoming Ramadan experience just minutes from downtown.
+        </p>
+      </div>
+
+      <div class="two-column">
+        <div>
+          <p style="margin-bottom: 0.9rem; font-size: 0.95rem;">
+            Share Iftar at long communal tables, hear from local leaders and organizations, and enjoy a program that highlights Houston’s diverse Muslim community.
+          </p>
+          <p style="margin-bottom: 0.9rem; font-size: 0.95rem;">
+            Whether you are a student, professional, family, or visiting friend, this event is designed to help you connect, reflect, and build lasting relationships.
+          </p>
+          <ul class="list">
+            <li>
+              <span class="list-icon">🤝</span>
+              <span>Network with local professionals, students, and organizations from across Greater Houston.</span>
+            </li>
+            <li>
+              <span class="list-icon">🕌</span>
+              <span>Break your fast together and pray in congregation with a dedicated prayer space.</span>
+            </li>
+            <li>
+              <span class="list-icon">🌙</span>
+              <span>Celebrate Ramadan traditions in a modern, welcoming, and family-friendly setting.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Who you'll meet</h3>
+          <ul class="list">
+            <li>
+              <span class="list-icon">🏙️</span>
+              <span>Young professionals, founders, community leaders, and creatives.</span>
+            </li>
+            <li>
+              <span class="list-icon">🎓</span>
+              <span>University students and recent graduates looking to grow their network.</span>
+            </li>
+            <li>
+              <span class="list-icon">💼</span>
+              <span>Nonprofits, masjid reps, and sponsors showcasing resources for the community.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <span>Ready to join us this Ramadan?</span>
+        <a href="#tickets" class="btn btn-primary">Reserve your seat</a>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule">
+      <div class="section-header">
+        <div class="section-kicker">Schedule</div>
+        <h2 class="section-title">Evening schedule</h2>
+        <p class="section-subtitle">
+          Arrive early, stay late, and make the most of the night with a structured yet relaxed flow.
+        </p>
+      </div>
+
+      <div class="schedule-grid">
+        <div class="schedule-item">
+          <div class="schedule-time">5:00 PM</div>
+          <div>
+            <div class="schedule-title">Check-in & registration</div>
+            <div class="schedule-desc">
+              Doors open, badge pickup, photo backdrop, and light refreshments as guests arrive.
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">5:30 – 6:15 PM</div>
+          <div>
+            <div class="schedule-title">Welcome hour & networking</div>
+            <div class="schedule-desc">
+              Meet fellow attendees, sponsors, and community leaders with guided introductions and table icebreakers.
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">6:30 PM</div>
+          <div>
+            <div class="schedule-title">Iftar dinner</div>
+            <div class="schedule-desc">
+              Break your fast with dates and water, followed by a catered dinner featuring local Houston favorites.
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">Maghrib</div>
+          <div>
+            <div class="schedule-title">Congregational prayer</div>
+            <div class="schedule-desc">
+              Congregational Maghrib prayer led by a local imam, with a dedicated prayer area and wudu facilities.
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">7:30 – 9:00 PM</div>
+          <div>
+            <div class="schedule-title">Program & entertainment</div>
+            <div class="schedule-desc">
+              Speakers, community spotlights, nasheeds or performances, and interactive segments with sponsors and partners.
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">9:00 PM</div>
+          <div>
+            <div class="schedule-title">Closing & hangout</div>
+            <div class="schedule-desc">
+              Closing remarks, du’a, final networking, and time to visit sponsor and community organization tables.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <span>Want to see the full lineup of speakers and entertainment?</span>
+        <a href="#contact" class="btn btn-outline" style="border-color: #FBBF24;">Request program details</a>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section id="venue">
+      <div class="section-header">
+        <div class="section-kicker">Venue</div>
+        <h2 class="section-title">Near downtown Houston</h2>
+        <p class="section-subtitle">
+          Conveniently located just minutes from Houston’s downtown core, with on-site parking and easy rideshare access.
+        </p>
+      </div>
+
+      <div class="two-column">
+        <div>
+          <div class="map-placeholder">
+            <div class="map-overlay-label">Map preview</div>
+            <span>
+              Embed a live Google Maps view or a screenshot of the venue location here.<br />
+              Replace this box with your actual map embed code.
+            </span>
+          </div>
+          <div style="margin-top: 0.7rem;">
+            <a href="#" class="btn btn-primary" style="font-size: 0.85rem;">Open in Google Maps</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Venue details</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.65rem;">
+            <strong>Venue name:</strong> To be announced (near Downtown Houston, TX)
+          </p>
+          <ul class="list" style="font-size: 0.9rem;">
+            <li>
+              <span class="list-icon">🚗</span>
+              <span>On-site parking and clear signage for arrival and check-in.</span>
+            </li>
+            <li>
+              <span class="list-icon">🧕</span>
+              <span>Dedicated prayer space with rugs and separate areas as needed.</span>
+            </li>
+            <li>
+              <span class="list-icon">👨‍👩‍👧</span>
+              <span>Family-friendly seating and accessibility for strollers and wheelchairs.</span>
+            </li>
+            <li>
+              <span class="list-icon">🏷️</span>
+              <span>Sponsor booths and community organization tables throughout the venue.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tickets -->
+    <section id="tickets">
+      <div class="section-header">
+        <div class="section-kicker">Tickets</div>
+        <h2 class="section-title">Tickets & registration</h2>
+        <p class="section-subtitle">
+          Reserve your spot before tickets sell out. Choose the option that best fits you or your group.
+        </p>
+      </div>
+
+      <div class="tickets-grid">
+        <div class="ticket-card">
+          <div class="ticket-label">Early bird</div>
+          <div class="ticket-name">Individual ticket</div>
+          <div class="ticket-price">$XX</div>
+          <div class="ticket-meta">Available until February 15, 2026.</div>
+          <ul class="ticket-benefits">
+            <li>Reserved seating in the main hall</li>
+            <li>Full Iftar dinner and evening program</li>
+            <li>Priority check-in at registration</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Get early bird ticket</a>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-label">Standard</div>
+          <div class="ticket-name">General admission</div>
+          <div class="ticket-price">$YY</div>
+          <div class="ticket-meta">From February 16 until sold out.</div>
+          <ul class="ticket-benefits">
+            <li>Access to Iftar dinner and full program</li>
+            <li>Open seating in general admission areas</li>
+            <li>Access to sponsors and community booths</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Get general ticket</a>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-label">Group</div>
+          <div class="ticket-name">Reserved table</div>
+          <div class="ticket-price">$ZZ</div>
+          <div class="ticket-meta">Perfect for organizations, families, or friends.</div>
+          <ul class="ticket-benefits">
+            <li>Reserved table for up to 8 guests</li>
+            <li>Recognition during the program (optional)</li>
+            <li>Priority access for group check-in</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Reserve a table</a>
+        </div>
+      </div>
+
+      <p class="tickets-note">
+        Student discounts and financial assistance are available. If ticket cost is a barrier, please reach out to our team—we want this evening to be accessible.
+      </p>
+
+      <div class="cta-strip">
+        <span>Have a question about ticket types or group bookings?</span>
+        <a href="#faq" class="btn btn-outline" style="border-color: #FBBF24;">View ticket FAQs</a>
+      </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section id="sponsors">
+      <div class="section-header">
+        <div class="section-kicker">Sponsors</div>
+        <h2 class="section-title">Sponsors & partners</h2>
+        <p class="section-subtitle">
+          Houston Iftar 2026 is supported by local businesses, nonprofits, and community organizations.
+        </p>
+      </div>
+
+      <div class="sponsors-grid">
+        <div class="sponsor-tile">Sponsor Logo 1</div>
+        <div class="sponsor-tile">Sponsor Logo 2</div>
+        <div class="sponsor-tile">Sponsor Logo 3</div>
+        <div class="sponsor-tile">Sponsor Logo 4</div>
+      </div>
+
+      <div class="sponsor-cta">
+        <p>
+          Want your brand or organization featured at Houston Iftar 2026? Explore sponsorship options and community partner opportunities.
+        </p>
+        <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+          <a href="#" class="btn btn-outline" style="border-color:#0F766E; color:#0F766E; background:#ECFEFF;">Download sponsor deck</a>
+          <a href="#contact" class="btn btn-primary">Talk to the team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Merchandise -->
+    <section id="merch">
+      <div class="section-header">
+        <div class="section-kicker">Merch</div>
+        <h2 class="section-title">Limited-edition merchandise</h2>
+        <p class="section-subtitle">
+          Take a piece of the evening home with you. Pre-order items when you purchase your ticket.
+        </p>
+      </div>
+
+      <div class="merch-grid">
+        <div class="merch-card">
+          <div class="merch-image"></div>
+          <div class="merch-tag">T-shirt</div>
+          <div style="font-weight:600;">Houston Iftar Tee</div>
+          <p>Soft neutral tee featuring a minimalist Houston skyline and crescent design with the event date.</p>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Pre-orders open soon.</p>
+        </div>
+
+        <div class="merch-card">
+          <div class="merch-image" style="background:linear-gradient(135deg,#0C1B33,#1F2937);"></div>
+          <div class="merch-tag">Mug</div>
+          <div style="font-weight:600;">Crescent Mug</div>
+          <p>Deep blue ceramic mug with gold crescent and lantern pattern, perfect for suhoor or late-night chai.</p>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Available in limited quantity.</p>
+        </div>
+
+        <div class="merch-card">
+          <div class="merch-image" style="background:linear-gradient(135deg,#B8860B,#C6B6A2);"></div>
+          <div class="merch-tag">Tote</div>
+          <div style="font-weight:600;">Community Tote</div>
+          <p>Canvas tote with a geometric motif and “Houston Iftar 2026” branding.</p>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Add to your ticket at checkout.</p>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <span>Want first access when merch drops?</span>
+        <a href="#contact" class="btn btn-primary">Join the merch list</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-header">
+        <div class="section-kicker">FAQ</div>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-subtitle">
+          Find quick answers about tickets, dress code, family accommodations, and more.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What is included with my ticket?</div>
+          <div class="faq-answer">
+            Every ticket includes access to the venue, Iftar dinner, the full evening program, and congregational prayer facilities.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is the event family-friendly?</div>
+          <div class="faq-answer">
+            Yes. Families and children are welcome, and we aim to provide a comfortable space for guests of all ages.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What should I wear?</div>
+          <div class="faq-answer">
+            We recommend modest, semi-formal or smart casual attire that is comfortable for prayer and photos.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Will there be a prayer space?</div>
+          <div class="faq-answer">
+            Yes, there will be a dedicated prayer area with rugs and space for both brothers and sisters.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Are there vegetarian or dietary options?</div>
+          <div class="faq-answer">
+            We plan to offer vegetarian options and can accommodate common dietary needs. Please share details during registration.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can non-Muslim friends attend?</div>
+          <div class="faq-answer">
+            Absolutely. Non-Muslim friends and colleagues are welcome to attend and learn more about Ramadan and the community.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-footer">
+        Still have questions? <a href="#contact" style="color:#0F766E; font-weight:500;">Contact the organizing team</a>.
+      </div>
+    </section>
+
+    <!-- Social / Newsletter -->
+    <section id="contact">
+      <div class="social-section">
+        <div>
+          <div class="section-kicker" style="color:#FCD34D;">Stay connected</div>
+          <h2 class="section-title" style="color:#F9FAFB; font-size:1.4rem; margin-bottom:0.4rem;">Sign up & follow</h2>
+          <p style="font-size:0.9rem; color:#E5E7EB; max-width:26rem; margin-bottom:0.9rem;">
+            Get updates on speakers, ticket releases, and future community events hosted around Houston.
+          </p>
+
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-primary">Join newsletter</button>
+            <label style="font-size:0.8rem; display:flex; gap:0.4rem; align-items:flex-start;">
+              <input type="checkbox" style="margin-top:0.15rem; width:14px; height:14px;" />
+              <span class="newsletter-small">I’m interested in volunteering or sponsoring future events.</span>
+            </label>
+          </form>
+        </div>
+
+        <div>
+          <div class="social-links">
+            <div class="social-row">
+              <div class="social-icon">IG</div>
+              <span>@houstoniftar (Instagram)</span>
+            </div>
+            <div class="social-row">
+              <div class="social-icon">TT</div>
+              <span>@houstoniftar (TikTok)</span>
+            </div>
+            <div class="social-row">
+              <div class="social-icon">✉</div>
+              <span>hello@houstoniftar.com</span>
+            </div>
+          </div>
+
+          <div class="qr-grid">
+            <div class="qr-card">
+              <strong>QR • Tickets</strong><br />
+              Add your QR code image here linking directly to the ticketing page.
+            </div>
+            <div class="qr-card">
+              <strong>QR • Instagram</strong><br />
+              Add a QR code for your Instagram profile to grow your community.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-title">Houston Iftar 2026</div>
+        <p>
+          A community-led Ramadan gathering bringing together Muslims and friends of the community for a night of faith, food, and friendship.
+        </p>
+      </div>
+      <div>
+        <div class="footer-title">Quick links</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#tickets">Tickets</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li>Email: hello@houstoniftar.com</li>
+          <li>Location: Near Downtown Houston, Texas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Houston Iftar. All rights reserved.</span>
+      <span>Designed for a warm, welcoming community experience.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
