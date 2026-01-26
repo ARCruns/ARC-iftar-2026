@@ -89,11 +89,7 @@
       font-size: 0.9rem;
       background: radial-gradient(circle at 20% 0%, #FACC6B, #B8860B);
     }
-    .logo-img {
-      height: 36px;
-      width: auto;
-      border-radius: 4px;
-    }
+
     nav ul {
       display: flex;
       align-items: center;
@@ -479,21 +475,13 @@
       background: #FFFFFF;
       border-radius: 0.9rem;
       border: 1px solid #E5E7EB;
-      padding: 1.2rem 1rem;
+      padding: 0.85rem;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.85rem;
       color: var(--text-muted);
-      height: 80px; /* Fixed height */
     }
-    
-    .sponsor-tile img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-    }
-
 
     .sponsor-cta {
       margin-top: 1.2rem;
@@ -579,6 +567,26 @@
       align-items: center;
     }
 
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 380px;
+    }
+
+    .newsletter-form input[type="email"] {
+      padding: 0.65rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .newsletter-small {
+      font-size: 0.8rem;
+      color: rgba(229, 231, 235, 0.9);
+    }
 
     .social-links {
       display: grid;
@@ -748,7 +756,7 @@
   <header>
     <div class="nav-container">
       <div class="logo">
-        <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/IMG_2714.JPG?raw=true" alt="Arab Run Club Texas" class="logo-img" />
+        <div class="logo"></div>
         <div>
           <div>ARC Texas Iftar 2026</div>
         </div>
@@ -1054,7 +1062,7 @@
         <span>Have a question about ticket types or group bookings?</span>
         <a href="#faq" class="btn btn-outline" style="border-color: #FBBF24;">View ticket FAQs</a>
       </div>
-
+    </section>
 
     <!-- Sponsors -->
     <section id="sponsors">
@@ -1062,22 +1070,16 @@
         <div class="section-kicker">Sponsors</div>
         <h2 class="section-title">Sponsors & partners</h2>
         <p class="section-subtitle">
-          ARC Texas Iftar 2026 is supported by local businesses, nonprofits, and community organizations. Here are our early sponsors:
+          ARC Texas Iftar 2026 is supported by local businesses, nonprofits, and community organizations.
         </p>
       </div>
-        
-      <div class="sponsors-grid">
-          <div class="sponsor-tile">
-            <img src="https://carwrecklawyertexas.com/wp-content/uploads/2023/10/cropped-TL_Logo_NoSlogan.png" alt="Sponsor 1" />
-          </div>
-          <div class="sponsor-tile">
-            <img src="https://via.placeholder.com/120x60/4A90E2/FFFFFF?text=LOGO" alt="Sponsor 2" />
-          </div>
-          <div class="sponsor-tile">
-            <img src="https://via.placeholder.com/120x60/7ED321/FFFFFF?text=LOGO" alt="Sponsor 3" />
-          </div>
-        </div>
 
+      <div class="sponsors-grid">
+        <div class="sponsor-tile">Sponsor Logo 1</div>
+        <div class="sponsor-tile">Sponsor Logo 2</div>
+        <div class="sponsor-tile">Sponsor Logo 3</div>
+        <div class="sponsor-tile">Sponsor Logo 4</div>
+      </div>
 
       <div class="sponsor-cta">
         <p>
@@ -1201,7 +1203,10 @@
               <strong>QR • Tickets</strong><br />
               Add your QR code image here linking directly to the ticketing page.
             </div>
-
+            <div class="qr-card">
+              <strong>QR • Instagram</strong><br />
+              Add a QR code for your Instagram profile to grow your community.
+            </div>
           </div>
         </div>
       </div>
