@@ -26,7 +26,30 @@
       --white: #ffffff;
       --icon-url: url("https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-camel.PNG?raw=true"); /* Replace with camel icon */
     }
+    .about-with-character {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .about-character img {
+    max-width: 180px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .about-with-character {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .about-character img {
+      margin: 0 auto;
+    }
+  }
 
+    
     * {
       box-sizing: border-box;
       margin: 0;
@@ -966,14 +989,20 @@
 
   <main>
     <!-- About -->
-    <section id="about">
-      <div class="section-header">
-        <div class="section-kicker">About</div>
-        <h2 class="section-title">An evening to break fast together</h2>
-        <p class="section-subtitle">
-          ARC Texas Iftar 2026 brings together members from Arab Run Club chapters in Houston, Austin, and San Antonio, along with friends of the community, for one unforgettable Ramadan night.
-        </p>
-      </div>
+    <section id="about" class="about-with-character">
+  <div class="section-header">
+    <div class="section-kicker">About</div>
+    <h2 class="section-title">An evening to break fast together</h2>
+    <p class="section-subtitle">
+      ARC Texas Iftar 2026 brings together members from Arab Run Club chapters in Houston, Austin, and San Antonio, along with friends of the community, for one unforgettable Ramadan night.
+    </p>
+  </div>
+
+  <div class="about-character">
+    <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-iftar.png?raw=true" alt="Iftar character" />
+  </div>
+</section>
+
 
       <div class="two-column">
         <div>
