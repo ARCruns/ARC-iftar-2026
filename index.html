@@ -582,7 +582,64 @@
   .ticket-card .btn {
     margin-top: auto;
   }
+  
+  /* Tickets layout */
+    .tickets-with-icon {
+      position: relative;
+    }
+    
+    .tickets-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Icon positioning */
+    .tickets-icon {
+      position: absolute;
+      right: 2rem;
+      bottom: 1.5rem;
+      pointer-events: none;
+    }
+    
+    .tickets-icon img {
+      width: 140px;
+      max-width: 28vw;
+      opacity: 0.95;
+    }
+    
+    /* Icon card styling */
+    .ticket-icon-only {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    
+    .ticket-icon-only img {
+      width: 120px;
+      height: auto;
+      max-width: 100%;
+    }
 
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .tickets-icon {
+        position: static;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+    
+      .tickets-icon img {
+        width: 110px;
+      }
+    }
+
+  
   /* Charity */
   #charity {
     background: linear-gradient(180deg, #F9F5EF 0%, #F3ECE3 100%);
@@ -608,6 +665,32 @@
   #charity .btn {
     margin-top: 1rem;
   }
+  
+  .charity-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+    }
+    
+    .charity-icon img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .charity-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    
+      .charity-icon {
+        margin-top: 2rem;
+      }
+    }
+
 
   /* SPONSORS */
   .sponsors-grid {
@@ -1088,33 +1171,37 @@
       <a href="#tickets" class="btn btn-primary">Reserve your seat</a>
     </div>
 
-    <!-- Charity -->
-    <section id="charity">
-      <div class="card">
-        <div class="section-header">
-          <div class="section-kicker">Charity Partner</div>
-          <h2 class="section-title">Supporting a Cause That Matters</h2>
-          <p class="section-subtitle">
-            This year’s ARC Texas Iftar Fundraiser is proud to partner with
-            <strong> Human Appeal</strong>, an organization dedicated to
-            helping Palestinian and Syrian displaced refugees in Lebanon.
-          </p>
+<!-- Charity -->
+<section id="charity" class="charity-with-icon">
+  <div class="card charity-card">
+    <div class="section-header">
+      <div class="section-kicker">Charity Partner</div>
+      <h2 class="section-title">Supporting a Cause That Matters</h2>
+      <p class="section-subtitle">
+        This year’s ARC Texas Iftar Fundraiser is proud to partner with
+        <strong> Human Appeal</strong>, an organization dedicated to
+        helping Palestinian and Syrian displaced refugees in Lebanon.
+      </p>
 
-          <p class="section-body">
-            A large portion of all ticket sales and donations from this event will go directly
-            toward supporting their mission and making a meaningful impact in the lives
-            of those they serve.
-          </p>
+      <p class="section-body">
+        A large portion of all ticket sales and donations from this event will go directly
+        toward supporting their mission and making a meaningful impact in the lives
+        of those they serve.
+      </p>
 
-          <a href="https://humanappealusa.org/"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="btn btn-primary">
-            Visit Their Website
-          </a>
-        </div>
-      </div>
-    </section>
+      <a href="https://www.instagram.com/reacheveryhuman"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-primary">
+        Visit Their Instagram Page
+      </a>
+    </div>
+
+    <div class="charity-icon">
+      <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-money.PNG?raw=true" alt="Charity icon" />
+    </div>
+  </div>
+</section>
 
     <!-- Schedule -->
     <section id="schedule">
@@ -1240,49 +1327,59 @@
       </div>
     </section>
 
-    <!-- Tickets -->
-    <section id="tickets">
-      <div class="section-header">
-        <div class="section-kicker">Tickets</div>
-        <h2 class="section-title">Tickets & registration</h2>
-        <p class="section-subtitle">
-          Reserve your spot before tickets sell out. Choose the option that best fits you or your group.
-        </p>
-      </div>
+<!-- Tickets -->
+<section id="tickets">
+  <div class="section-header">
+    <div class="section-kicker">Tickets</div>
+    <h2 class="section-title">Tickets & registration</h2>
+    <p class="section-subtitle">
+      Reserve your spot before tickets sell out. Choose the option that best fits you or your group.
+    </p>
+  </div>
 
-      <div class="tickets-grid">
-        <div class="ticket-card">
-          <div class="ticket-label">Early bird</div>
-          <div class="ticket-name">Individual ticket</div>
-          <div class="ticket-price">$65</div>
-          <div class="ticket-meta">Available until February 1, 2026.</div>
-          <ul class="ticket-benefits">
-            <li>Reserved seating in the main hall</li>
-            <li>Full Iftar dinner and evening program</li>
-            <li>Priority check-in at registration</li>
-          </ul>
-          <a href="#" class="btn btn-primary">Get early bird ticket</a>
-        </div>
+  <div class="tickets-grid">
+    <div class="ticket-card">
+      <div class="ticket-label">Early bird</div>
+      <div class="ticket-name">Individual ticket</div>
+      <div class="ticket-price">$65</div>
+      <div class="ticket-meta">Available until February 1, 2026.</div>
+      <ul class="ticket-benefits">
+        <li>Reserved seating in the main hall</li>
+        <li>Full Iftar dinner and evening program</li>
+        <li>Priority check-in at registration</li>
+      </ul>
+      <a href="#" class="btn btn-primary">Get early bird ticket</a>
+    </div>
 
-        <div class="ticket-card">
-          <div class="ticket-label">Standard</div>
-          <div class="ticket-name">General admission</div>
-          <div class="ticket-price">$75</div>
-          <div class="ticket-meta">From February 16 until sold out.</div>
-          <ul class="ticket-benefits">
-            <li>Access to Iftar dinner and full program</li>
-            <li>Open seating in general admission areas</li>
-            <li>Access to sponsors and community booths</li>
-          </ul>
-          <a href="#" class="btn btn-primary">Get general ticket</a>
-        </div>
-      </div>
+    <div class="ticket-card">
+      <div class="ticket-label">Standard</div>
+      <div class="ticket-name">General admission</div>
+      <div class="ticket-price">$75</div>
+      <div class="ticket-meta">From February 16 until sold out.</div>
+      <ul class="ticket-benefits">
+        <li>Access to Iftar dinner and full program</li>
+        <li>Open seating in general admission areas</li>
+        <li>Access to sponsors and community booths</li>
+      </ul>
+      <a href="#" class="btn btn-primary">Get general ticket</a>
+    </div>
 
-      <div class="cta-strip">
-        <span>Have a question about ticket types or group bookings?</span>
-        <a href="#faq" class="btn btn-outline">View ticket FAQs</a>
-      </div>
-    </section>
+    <!-- Icon as third "ticket" -->
+    <div class="ticket-card ticket-icon-card">
+      <img
+        src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-meeting.PNG?raw=true"
+        alt="Tickets icon"
+      />
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <span>Have a question about ticket types or group bookings?</span>
+    <a href="#faq" class="btn btn-outline">View ticket FAQs</a>
+  </div>
+</section>
+
+
 
     <!-- Sponsors -->
     <section id="sponsors">
