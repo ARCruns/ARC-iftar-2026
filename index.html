@@ -327,7 +327,8 @@
   }
 
   section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
   }
 
   section:not(#charity)::after {
@@ -430,18 +431,18 @@
   }
 
   .about-character img {
-    max-width: 170px;
+    max-width: 250px;
     height: auto;
   }
 
   @media (max-width: 768px) {
     .about-with-character {
-      grid-template-columns: 1fr;
+      column-gab: 2.5rem;
       text-align: center;
     }
 
     .about-character img {
-      margin: 0.5rem auto 0;
+      margin-left: -1rem auto 0;
     }
   }
 
@@ -1215,37 +1216,37 @@
 
       <div class="schedule-grid">
         <div class="schedule-item">
-          <div class="schedule-time">5:00 PM</div>
+          <div class="schedule-time">5:30 PM</div>
           <div>
             <div class="schedule-title">Check-in & registration</div>
             <div class="schedule-desc">
-              Doors open, badge pickup, and photo backdrop.
+              Doors open, wristband pickup, and photo backdrop.
             </div>
           </div>
         </div>
 
         <div class="schedule-item">
-          <div class="schedule-time">5:30 – 6:15 PM</div>
+          <div class="schedule-time">6:15 – 7:15 PM</div>
           <div>
             <div class="schedule-title">Welcome hour & networking</div>
             <div class="schedule-desc">
-              Meet attendees from across Texas, sponsors, and community leaders.
+              Meet attendees from across Texas, sponsors, vendors, and community leaders.
             </div>
           </div>
         </div>
 
         <div class="schedule-item">
-          <div class="schedule-time">6:30 PM</div>
+          <div class="schedule-time">7:31 PM</div>
           <div>
-            <div class="schedule-title">Iftar dinner</div>
+            <div class="schedule-title">Iftar</div>
             <div class="schedule-desc">
-              Break your fast with dates and water, followed by a catered dinner.
+              Break your fast with dates and water.
             </div>
           </div>
         </div>
 
         <div class="schedule-item">
-          <div class="schedule-time">Maghrib</div>
+          <div class="schedule-time">8:00 PM Maghrib</div>
           <div>
             <div class="schedule-title">Congregational prayer</div>
             <div class="schedule-desc">
@@ -1255,9 +1256,19 @@
         </div>
 
         <div class="schedule-item">
-          <div class="schedule-time">7:30 – 9:00 PM</div>
+          <div class="schedule-time"> 8:15 PM</div>
           <div>
-            <div class="schedule-title">Program & entertainment</div>
+            <div class="schedule-title">Iftar dinner</div>
+            <div class="schedule-desc">
+              Enjoy a specially curated, savory dining experience catered by local Houstin diners.
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">9:15 – 9:40 PM</div>
+          <div>
+            <div class="schedule-title">Perfromance & entertainment</div>
             <div class="schedule-desc">
               Speakers, community spotlights, performances, raffles, and interactive moments.
             </div>
@@ -1265,7 +1276,7 @@
         </div>
 
         <div class="schedule-item">
-          <div class="schedule-time">9:00 PM</div>
+          <div class="schedule-time">9:40 – 11:00PM</div>
           <div>
             <div class="schedule-title">Closing & hangout</div>
             <div class="schedule-desc">
@@ -1275,10 +1286,7 @@
         </div>
       </div>
 
-      <div class="cta-strip">
-        <span>Want to see the full lineup of speakers and entertainment?</span>
-        <a href="#contact" class="btn btn-outline">Request program details</a>
-      </div>
+
     </section>
 
     <!-- Venue -->
@@ -1351,18 +1359,7 @@
       <a href="#" class="btn btn-primary">Get early bird ticket</a>
     </div>
 
-    <div class="ticket-card">
-      <div class="ticket-label">Standard</div>
-      <div class="ticket-name">General admission</div>
-      <div class="ticket-price">$75</div>
-      <div class="ticket-meta">From February 16 until sold out.</div>
-      <ul class="ticket-benefits">
-        <li>Access to Iftar dinner and full program</li>
-        <li>Open seating in general admission areas</li>
-        <li>Access to sponsors and community booths</li>
-      </ul>
-      <a href="#" class="btn btn-primary">Get general ticket</a>
-    </div>
+
 
     <!-- Icon as third "ticket" -->
     <div class="ticket-card ticket-icon-card">
@@ -1512,13 +1509,6 @@
             </a>
           </div>
         </div>
-
-        <div class="qr-grid">
-          <div class="qr-card">
-            <strong>QR • Tickets</strong><br />
-            Add your QR code image here linking directly to the ticketing page.
-          </div>
-        </div>
       </div>
     </section>
   </main>
@@ -1543,7 +1533,7 @@
         </ul>
       </div>
       <div>
-        <div class="footer-title">Contact</div>
+        <div class="footer-title">Location</div>
         <ul class="footer-links">
           <li>7107 Navigation Blvd, Houston, TX 77011</li>
         </ul>
@@ -1551,7 +1541,8 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 ARC Iftar. All rights reserved.</span>
-      <span>Designed for a warm, welcoming Ramadan experience.</span>
+      
+       <span>Disclaimer: This event is independently hosted. All donations go directly to Reach Every Human. Tickets, sponsorships, and vendor fees are not tax-deductible. All sales are final. Sponsorships and vendor participation are for promotional purposes only and no business outcomes are guaranteed. Attendance is at your own risk. Organizers are not liable for loss, injury, or damages.</span>
     </div>
   </footer>
 </div>
