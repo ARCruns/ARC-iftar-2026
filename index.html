@@ -1504,29 +1504,25 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-title">ARC Texas Iftar 2026</div>
-        <p>
-          A community-led Ramadan gathering uniting ARC chapters across Texas for a night of faith, food, and friendship.
-        </p>
-      </div>
-      <div>
-      <div>
-        <div class="footer-title">Location</div>
-        <ul class="footer-links">
-          <li>7107 Navigation Blvd, Houston, TX 77011</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 ARC Iftar. All rights reserved.</span>
-      
-       <span>Disclaimer: This event is independently hosted. All donations go directly to Reach Every Human. Tickets, sponsorships, and vendor fees are not tax-deductible. All sales are final. Sponsorships and vendor participation are for promotional purposes only and no business outcomes are guaranteed. Attendance is at your own risk. Organizers are not liable for loss, injury, or damages.</span>
-    </div>
-  </footer>
+  <!-- Footer Bottom -->
+  <div class="footer-bottom" style="flex-direction: column; gap: 0.5rem; text-align: left;">
+    <span>© 2026 ARC Iftar. All rights reserved.</span>
+    <span style="font-size: 0.78rem; color: #CFC7BC;">
+      Disclaimer: This event is independently hosted. All donations go directly to Reach Every Human. Tickets, sponsorships, and vendor fees are not tax-deductible. All sales are final. Sponsorships and vendor participation are for promotional purposes only and no business outcomes are guaranteed. Attendance is at your own risk. Organizers are not liable for loss, injury, or damages.
+    </span>
+  </div>
+</footer>
+
+
+  <script>
+    // Toggle mobile nav
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  </script>
+
 </div>
 
 <script>
