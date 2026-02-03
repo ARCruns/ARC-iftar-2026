@@ -344,6 +344,7 @@
     margin-bottom: 1.1rem;
   }
 
+
   .section-kicker {
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -430,21 +431,23 @@
     content: none !important;
   }
 
-  .about-character img {
-    max-width: 250px;
-    height: auto;
+.about-character img {
+  max-width: 250px;
+  height: auto;
+  margin-left: -22rem;
+}
+
+@media (max-width: 768px) {
+  .about-with-character {
+    column-gap: 2.5rem;  
+    text-align: center;
   }
 
-  @media (max-width: 768px) {
-    .about-with-character {
-      column-gab: 2.5rem;
-      text-align: center;
+      .about-character img {
+        margin: 0 auto;
+        max-width: 220px;
+      }
     }
-
-    .about-character img {
-      margin-left: -1rem auto 0;
-    }
-  }
 
   /* SCHEDULE */
   .schedule-grid {
@@ -1079,7 +1082,7 @@
           <a href="#tickets" class="btn btn-primary">Get Tickets</a>
           <a href="https://forms.gle/jM8jn4h1LrrYBNY4A" class="btn btn-outline" target="_blank">Become a Sponsor</a>
         </div>
-        <p class="hero-note">Limited capacity. Early bird pricing available.</p>
+        <p class="hero-note">Limited capacity. Early bird pricing available. This event is 18+ and open to all backgrounds.</p>
       </div>
 
       <div class="hero-right">
@@ -1088,7 +1091,7 @@
           <div class="hero-stats">
             <div class="stat-item">
               <span class="stat-label">Guests</span>
-              <span class="stat-value">200</span>
+              <span class="stat-value">200+</span>
             </div>
             <div class="stat-item">
               <span class="stat-label">Program</span>
@@ -1114,7 +1117,6 @@
           ARC Texas Iftar 2026 brings together members from Arab Run Club chapters in Houston, Austin, and San Antonio, along with friends of the community, for one unforgettable Ramadan night.
         </p>
       </div>
-
       <div class="about-character">
         <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-iftar.png?raw=true" alt="Iftar character" />
       </div>
@@ -1126,7 +1128,7 @@
           Break fast at long communal tables, enjoy inspiring speakers and live entertainment, explore vendor booths, enter raffles, and connect with people who care about community, wellness, and giving back.
         </p>
         <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">
-          Whether you’re a student, young professional, creative, founder, or simply looking to experience Ramadan in a welcoming space, this night is designed to help you connect, reflect, and build lasting relationships, while supporting a great cause.
+          Whether you’re a student, young professional, creative, founder, or simply looking to experience Ramadan in a welcoming space, this 18+ night is designed to help you connect, reflect, and build lasting relationships, while supporting a great cause.
         </p>
         <ul class="list">
           <li>
@@ -1332,19 +1334,22 @@
     <h2 class="section-title">Tickets & registration</h2>
     <p class="section-subtitle">
       Reserve your spot before tickets sell out. Choose the option that best fits you or your group.
+      
+        Please Note: This event is 18+ and open to all backgrounds.
     </p>
   </div>
 
   <div class="tickets-grid">
     <div class="ticket-card">
-      <div class="ticket-label">Early bird</div>
+      <div class="ticket-label">Early Bird</div>
       <div class="ticket-name">Individual ticket</div>
       <div class="ticket-price">$65</div>
-      <div class="ticket-meta">Available until February 1, 2026.</div>
+      <div class="ticket-meta">Available until Early Bird tickets sell out</div>
       <ul class="ticket-benefits">
-        <li>Reserved seating in the main hall</li>
+        <li>Seating in the main hall</li>
         <li>Full Iftar dinner and evening program</li>
-        <li>Priority check-in at registration</li>
+        <li>Live entertainment and raffle entry</li>
+        <li>Access to all vendor vooths</li>
       </ul>
       <a href="#" class="btn btn-primary">Get early bird ticket</a>
     </div>
@@ -1376,10 +1381,10 @@
         
       <div class="sponsors-grid">
         <div class="sponsor-tile">
-          <img src="https://carwrecklawyertexas.com/wp-content/uploads/2023/10/cropped-TL_Logo_NoSlogan.png" alt="Sponsor 1" />
+          <img src="https://carwrecklawyertexas.com/wp-content/uploads/2023/10/cropped-TL_Logo_NoSlogan.png" alt="Takla Law" />
         </div>
         <div class="sponsor-tile">
-          <img src="https://via.placeholder.com/120x60/9B7E42/FFFFFF?text=LOGO" alt="Sponsor 2" />
+          <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/MASKAN-REALTY-GROUP-LOGO.png?raw=true" alt="Maskan Realty Group" />
         </div>
         <div class="sponsor-tile">
           <img src="https://via.placeholder.com/120x60/6B7D5C/FFFFFF?text=LOGO" alt="Sponsor 3" />
