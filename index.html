@@ -4,447 +4,452 @@
   <meta charset="UTF-8" />
   <title>ARC Texas Iftar 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Inter:wght@400;500;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-  :root {
-    --bg-parchment: #F6F1EA;
-    --bg-soft: #FBF8F3;
-    --bg-cream: #FDFBF7;
-    --accent-gold: #C89B3C;
-    --accent-dark-gold: #A57C2B;
-    --accent-olive: #6B7D5C;
-    --text-main: #2F2A24;
-    --text-muted: #6F675C;
-    --border-soft: #D8CFC1;
-    --white: #ffffff;
-    --icon-url: url("https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-camel.PNG?raw=true");
-  }
+  <style>
+    :root {
+      --bg-parchment: #F6F1EA;
+      --bg-soft: #FBF8F3;
+      --bg-cream: #FDFBF7;
+      --accent-gold: #C89B3C;
+      --accent-dark-gold: #A57C2B;
+      --accent-olive: #6B7D5C;
+      --text-main: #2F2A24;
+      --text-muted: #6F675C;
+      --border-soft: #D8CFC1;
+      --white: #ffffff;
+      --icon-url: url("https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-camel.PNG?raw=true");
+    }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: var(--text-main);
-    background: var(--bg-parchment);
-    line-height: 1.65;
-  }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-main);
+      background: var(--bg-parchment);
+      line-height: 1.65;
+    }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+    body.nav-open {
+      overflow: hidden;
+    }
 
-  img {
-    max-width: 100%;
-    display: block;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  .page-wrapper {
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-  }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-  /* Subtle parchment texture overlay */
-  .page-wrapper::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-  }
+    .page-wrapper {
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-  /* Decorative watermark camel */
-  .page-wrapper::after {
-    content: "";
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 200px;
-    height: 200px;
-    background-image: var(--icon-url);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.04;
-    pointer-events: none;
-    z-index: 0;
-  }
+    /* Subtle parchment texture overlay */
+    .page-wrapper::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-  /* GLOBAL ICON STYLE */
-  .icon-img {
-    width: 20px;
-    height: 20px;
-    background-image: var(--icon-url);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    flex-shrink: 0;
-  }
+    /* Decorative watermark camel */
+    .page-wrapper::after {
+      content: "";
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 200px;
+      height: 200px;
+      background-image: var(--icon-url);
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-  /* NAVBAR */
-  header {
-    position: fixed;   /* always visible */
-    top: 0;
-    left: 0;
-    width: 100%;       /* full width */
-    z-index: 50;
-    backdrop-filter: blur(12px);
-    background: #3B2A1A;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  }
+    /* GLOBAL ICON STYLE */
+    .icon-img {
+      width: 20px;
+      height: 20px;
+      background-image: var(--icon-url);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      flex-shrink: 0;
+    }
 
-  .nav-container {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0.85rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #F5E6D3;
-  }
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: #3B2A1A;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    font-size: 1.1rem;
-  }
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #F5E6D3;
+    }
 
-  .logo-img {
-    height: 36px;
-    width: 36px;
-    object-fit: contain;
-    background: #F5E6D3;
-    padding: 0.35rem;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-  }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      font-size: 1.1rem;
+    }
 
-  nav ul {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    list-style: none;
-    font-size: 0.9rem;
-    margin: 0;
-    padding: 0;
-  }
+    .logo-img {
+      height: 36px;
+      width: 36px;
+      object-fit: contain;
+      background: #F5E6D3;
+      padding: 0.35rem;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
 
-  nav a {
-    opacity: 0.85;
-    color: #F5E6D3;
-    text-decoration: none;
-  }
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+      font-size: 0.9rem;
+      margin: 0;
+      padding: 0;
+    }
 
-  nav a:hover {
-    opacity: 1;
-    color: var(--accent-gold);
-  }
+    nav a {
+      opacity: 0.85;
+      color: #F5E6D3;
+      text-decoration: none;
+    }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.65rem 1.4rem;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-  }
+    nav a:hover {
+      opacity: 1;
+      color: var(--accent-gold);
+    }
 
-  .btn-primary {
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-dark-gold));
-    color: #fff;
-    box-shadow: 0 8px 18px rgba(168, 122, 38, 0.25);
-  }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
 
-  .btn-primary:hover {
-    filter: brightness(1.05);
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(168, 122, 38, 0.35);
-  }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-dark-gold));
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(168, 122, 38, 0.25);
+    }
 
-  .btn-outline {
-    background: transparent;
-    border-color: var(--accent-gold);
-    color: var(--accent-dark-gold);
-  }
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(168, 122, 38, 0.35);
+    }
 
-  .btn-outline:hover {
-    background: rgba(200, 155, 60, 0.08);
-  }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--accent-gold);
+      color: var(--accent-dark-gold);
+    }
 
-  .nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #F5E6D3;
-    font-size: 1.4rem;
-    cursor: pointer;
-  }
+    .btn-outline:hover {
+      background: rgba(200, 155, 60, 0.08);
+    }
 
-  /* HERO */
-  .hero {
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #F5E6D3;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
     background: linear-gradient(180deg, #F9F5EF 0%, #F3ECE3 100%);
     padding: 3.25rem 1.5rem 4rem;
+    margin-top: 45px; /* <-- Added space for fixed header */
     position: relative;
     z-index: 1;
-  }
-
-  .hero-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.25rem 0.7rem;
-    border-radius: 999px;
-    background: rgba(200, 155, 60, 0.12);
-    border: 1px solid rgba(200, 155, 60, 0.45);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 0.75rem;
-    color: var(--accent-dark-gold);
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 4.5vw, 3.3rem);
-    margin-bottom: 0.65rem;
-    color: var(--text-main);
-    font-weight: 700;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    max-width: 36rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .hero-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.35rem 0.7rem;
-    border-radius: 999px;
-    background: #FFFDF9;
-    font-size: 0.8rem;
-    border: 1px solid var(--border-soft);
-    color: var(--text-main);
-  }
-
-  .hero-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 0.65rem;
-  }
-
-  .hero-note {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .hero-right {
-    position: relative;
-  }
-
-  .hero-photo {
-    border-radius: 1.1rem;
-    height: 290px;
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-      url('https://github.com/ARCruns/ARC-iftar-2026/blob/main/arc-hero-image.JPEG?raw=true')
-      center/cover;
-    margin-bottom: 0.75rem;
-    border: 1px solid var(--border-soft);
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .stat-item span {
-    display: block;
-  }
-
-  .stat-label {
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.65rem;
-    opacity: 0.7;
-    margin-bottom: 0.1rem;
-  }
-
-  .stat-value {
-    font-weight: 600;
-    color: var(--text-main);
-  }
-
-  /* MAIN SECTIONS */
-  main {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 2.25rem 1.5rem 3rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  section {
-    margin-bottom: 0.1rem;
-    margin-top: 0.1rem;
-  }
-
-  section:not(#charity)::after {
-    content: "";
-    display: block;
-    width: 64px;
-    height: 1px;
-    background: rgba(0,0,0,0.06);
-    margin: 2.25rem auto 0;
-  }
-
-  .section-header {
-    margin-bottom: 1.1rem;
-  }
+   }
 
 
-  .section-kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.7rem;
-    color: var(--accent-dark-gold);
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-  }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
 
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.85rem;
-    margin-bottom: 0.45rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-main);
-    font-weight: 700;
-  }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(200, 155, 60, 0.12);
+      border: 1px solid rgba(200, 155, 60, 0.45);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.75rem;
+      color: var(--accent-dark-gold);
+    }
 
-  .section-subtitle {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    max-width: 38rem;
-    margin-bottom: 0.5rem;
-  }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 4.5vw, 3.3rem);
+      margin-bottom: 0.65rem;
+      color: var(--text-main);
+      font-weight: 700;
+    }
 
-  .two-column {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 2rem;
-    align-items: start;
-    margin-top: 0.9rem;
-  }
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin-bottom: 1.25rem;
+    }
 
-  .card {
-    background: var(--bg-cream);
-    border-radius: 1.1rem;
-    border: 1px solid var(--border-soft);
-    padding: 1.25rem 1.35rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
+    .hero-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+    }
 
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: #FFFDF9;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-soft);
+      color: var(--text-main);
+    }
 
-  .list {
-    list-style: none;
-    display: grid;
-    gap: 0.75rem;
-    font-size: 0.95rem;
-    margin-top: 0.65rem;
-  }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.65rem;
+    }
 
-  .list li {
-    display: flex;
-    gap: 0.6rem;
-  }
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
 
-  .list-icon {
-    width: 18px;
-    height: 18px;
-    background-image: var(--icon-url);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    margin-top: 0.2rem;
-    flex-shrink: 0;
-  }
+    .hero-right {
+      position: relative;
+    }
 
-  /* About with character */
-  .about-with-character {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 2.25rem;
-  }
+    .hero-photo {
+      border-radius: 1.1rem;
+      height: 290px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+        url('https://github.com/ARCruns/ARC-iftar-2026/blob/main/arc-hero-image.JPEG?raw=true')
+        center/cover;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--border-soft);
+    }
 
-  /* Remove old icon ONLY from About title */
-  #about .section-title::before {
-    content: none !important;
-  }
+    .hero-stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
 
-.about-character img {
-  max-width: 250px;
-  height: auto;
-  margin-left: -22rem;
-}
+    .stat-item span {
+      display: block;
+    }
 
-@media (max-width: 768px) {
-  .about-with-character {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 1.5rem;
-  }
+    .stat-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.65rem;
+      opacity: 0.7;
+      margin-bottom: 0.1rem;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* MAIN SECTIONS */
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.25rem 1.5rem 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      margin-bottom: 0.1rem;
+      margin-top: 0.1rem;
+    }
+
+    section:not(#charity)::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 1px;
+      background: rgba(0,0,0,0.06);
+      margin: 2.25rem auto 0;
+    }
+
+    .section-header {
+      margin-bottom: 1.1rem;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
+      color: var(--accent-dark-gold);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 38rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+      margin-top: 0.9rem;
+    }
+
+    .card {
+      background: var(--bg-cream);
+      border-radius: 1.1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1.25rem 1.35rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      margin-top: 0.65rem;
+    }
+
+    .list li {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .list-icon {
+      width: 18px;
+      height: 18px;
+      background-image: var(--icon-url);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    /* About with character */
+    .about-with-character {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    /* Remove old icon ONLY from About title */
+    #about .section-title::before {
+      content: none !important;
+    }
+
+    .about-character img {
+      max-width: 250px;
+      height: auto;
+      margin-left: -22rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-with-character {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+      }
 
       .about-character img {
         margin: 0 auto;
@@ -452,171 +457,147 @@
       }
     }
 
-  /* SCHEDULE */
-  .schedule-grid {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .schedule-item {
-    display: grid;
-    grid-template-columns: 120px minmax(0, 1fr);
-    gap: 1rem;
-    padding: 1rem 1.1rem;
-    border-radius: 1rem;
-    background: var(--bg-cream);
-    border: 1px solid var(--border-soft);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .schedule-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.07);
-  }
-
-  .schedule-time {
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: var(--accent-dark-gold);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .schedule-title {
-    font-weight: 600;
-    margin-bottom: 0.2rem;
-    color: var(--text-main);
-  }
-
-  .schedule-desc {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* MAP / VENUE */
-  .map-placeholder {
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 1px solid var(--border-soft);
-    background: #111827;
-    height: 270px;
-    position: relative;
-    color: #E5E7EB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .map-placeholder span {
-    font-size: 0.9rem;
-    max-width: 18rem;
-  }
-
-  /* TICKETS */
-  .tickets-grid {
-    display: grid;
-    gap: 1.35rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .ticket-card {
-    background: var(--bg-cream);
-    border-radius: 1.1rem;
-    border: 1px solid var(--border-soft);
-    padding: 1.3rem 1.4rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .ticket-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
-
-  .ticket-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--accent-dark-gold);
-    font-weight: 600;
-  }
-
-  .ticket-name {
-    font-weight: 600;
-    font-size: 1.05rem;
-    margin-bottom: 0.15rem;
-    color: var(--text-main);
-  }
-
-  .ticket-price {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    color: var(--text-main);
-  }
-
-  .ticket-meta {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-  }
-
-  .ticket-benefits {
-    list-style: disc;
-    padding-left: 1rem;
-    margin: 0;
-    display: grid;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    margin-bottom: 0.7rem;
-  }
-
-  .ticket-benefits li::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    margin-right: 0.4rem;
-    vertical-align: middle;
-  }
-
-  .ticket-card .btn {
-    margin-top: auto;
-  }
-  
-  /* Tickets layout */
-    .tickets-with-icon {
-      position: relative;
+    /* SCHEDULE */
+    .schedule-grid {
+      display: grid;
+      gap: 1rem;
     }
-    
-    .tickets-card {
-      position: relative;
+
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 1rem;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .schedule-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+    }
+
+    .schedule-time {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--accent-dark-gold);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .schedule-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: var(--text-main);
+    }
+
+    .schedule-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* MAP / VENUE */
+    .map-placeholder {
+      border-radius: 1rem;
       overflow: hidden;
+      border: 1px solid var(--border-soft);
+      background: #111827;
+      height: 270px;
+      position: relative;
+      color: #E5E7EB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
     }
-    
-    /* Icon positioning */
-    .tickets-icon {
-      position: absolute;
-      right: 2rem;
-      bottom: 1.5rem;
-      pointer-events: none;
+
+    .map-placeholder span {
+      font-size: 0.9rem;
+      max-width: 18rem;
     }
-    
-    .tickets-icon img {
-      width: 140px;
-      max-width: 28vw;
-      opacity: 0.95;
+
+    /* TICKETS */
+    .tickets-grid {
+      display: grid;
+      gap: 1.35rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    
-    /* Icon card styling */
-    .ticket-icon-only {
+
+    .ticket-card {
+      background: var(--bg-cream);
+      border-radius: 1.1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1.3rem 1.4rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .ticket-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .ticket-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-dark-gold);
+      font-weight: 600;
+    }
+
+    .ticket-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+      color: var(--text-main);
+    }
+
+    .ticket-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+    }
+
+    .ticket-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .ticket-benefits {
+      list-style: disc;
+      padding-left: 1rem;
+      margin: 0;
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .ticket-benefits li::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+
+    .ticket-card .btn {
+      margin-top: auto;
+    }
+
+    /* Hide icon-only ticket card on mobile */
+    .ticket-icon-card {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -625,108 +606,76 @@
       box-shadow: none;
       padding: 0;
     }
-    
-    .ticket-icon-only img {
+
+    .ticket-icon-card img {
       width: 120px;
       height: auto;
       max-width: 100%;
     }
 
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .tickets-icon {
-        position: static;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-      }
-    
-      .tickets-icon img {
-        width: 110px;
-      }
+    /* Charity */
+    #charity {
+      background: linear-gradient(180deg, #F9F5EF 0%, #F3ECE3 100%);
+      padding: 3.5rem 1.5rem;
+      border-radius: 1.6rem;
+      margin-top: 3rem;
     }
 
-  
-  /* Charity */
-  #charity {
-    background: linear-gradient(180deg, #F9F5EF 0%, #F3ECE3 100%);
-    padding: 3.5rem 1.5rem;
-    border-radius: 1.6rem;
-    margin-top: 3rem; /* space from CTA strip */
-  }
-
-  #charity .card {
-    border: none;
-    background: #FFFDF9;
-  }
-
-  #charity .section-title {
-    color: #3B2A1A;
-  }
-
-  #charity .section-subtitle,
-  #charity .section-body {
-    max-width: 40rem;
-  }
-
-  #charity .btn {
-    margin-top: 1rem;
-  }
-  
-  .charity-card {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2.5rem;
-  align-items: center;
+    #charity .card {
+      border: none;
+      background: #FFFDF9;
     }
-    
+
+    #charity .section-title {
+      color: #3B2A1A;
+    }
+
+    #charity .section-subtitle,
+    #charity .section-body {
+      max-width: 40rem;
+    }
+
+    #charity .btn {
+      margin-top: 1rem;
+    }
+
+    .charity-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
     .charity-icon img {
       max-width: 220px;
       width: 100%;
       height: auto;
     }
-    
-    /* Responsive */
+
     @media (max-width: 768px) {
       .charity-card {
         grid-template-columns: 1fr;
         text-align: center;
       }
-    
+
       .charity-icon {
         margin-top: 2rem;
       }
     }
 
-
-  /* SPONSORS */
-  .sponsors-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.1rem;
-  }
-
-  .sponsor-tile {
-    background: var(--bg-cream);
-    border-radius: 1rem;
-    border: 1px solid var(--border-soft);
-    padding: 1.25rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    height: 90px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
+    /* SPONSORS */
+    .sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
 
     .sponsor-tile {
       background: var(--bg-cream);
       border-radius: 1.2rem;
       border: 1px solid var(--border-soft);
       padding: 1.25rem;
-      height: 110px; /* gives a consistent card height */
+      height: 110px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -740,822 +689,928 @@
       object-fit: contain;
     }
 
-  .sponsor-cta {
-    margin-top: 1.25rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* MERCH */
-  .merch-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.25rem;
-  }
-
-  .merch-card {
-    background: var(--bg-cream);
-    border-radius: 1.1rem;
-    border: 1px solid var(--border-soft);
-    padding: 1.05rem 1.15rem 1.15rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-    font-size: 0.9rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .merch-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
-
-  .merch-image {
-    border-radius: 0.9rem;
-    height: 150px;
-    background: linear-gradient(135deg, #C89B3C, #6B7D5C);
-    margin-bottom: 0.4rem;
-  }
-
-  .merch-tag {
-    display: inline-flex;
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    background: rgba(200, 155, 60, 0.12);
-    font-size: 0.75rem;
-    color: var(--accent-dark-gold);
-  }
-
-  /* FAQ */
-  .faq-list {
-    display: grid;
-    gap: 0.9rem;
-  }
-
-  .faq-item {
-    background: var(--bg-cream);
-    border-radius: 1rem;
-    border: 1px solid var(--border-soft);
-    padding: 0.95rem 1rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .faq-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-  }
-
-  .faq-question {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-    color: var(--text-main);
-  }
-
-  .faq-answer {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  .faq-footer {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* SOCIAL & NEWSLETTER */
-  .social-section {
-    background: linear-gradient(135deg, #EDE4D6, #F6F1EA);
-    border-radius: 1.4rem;
-    padding: 1.75rem 1.5rem;
-    color: var(--text-main);
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 1.75rem;
-    align-items: center;
-    border: 1px solid var(--border-soft);
-  }
-
-  .social-links {
-    display: grid;
-    gap: 0.7rem;
-    font-size: 0.9rem;
-  }
-
-  .social-row {
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-
-  .social-row:hover {
-    transform: translateX(4px);
-  }
-
-  .social-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 999px;
-    border: 1px solid var(--border-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-  }
-
-  .social-logo {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    border-radius: 999px;
-    border: 1px solid var(--border-soft);
-    background: #fff;
-    padding: 4px;
-  }
-
-  .qr-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-top: 0.5rem;
-  }
-
-  .qr-card {
-    border-radius: 0.85rem;
-    border: 1px dashed var(--border-soft);
-    padding: 0.65rem 0.8rem;
-    font-size: 0.8rem;
-    background: #fff;
-    color: var(--text-muted);
-  }
-
-  /* CTA STRIPS */
-  .cta-strip {
-    border-radius: 1.2rem;
-    padding: 1.1rem 1.25rem;
-    background: linear-gradient(135deg, #F6F1EA, #EFE6D7);
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.9rem;
-    margin-top: 1.75rem;
-    margin-bottom: 3.5rem; /* space before charity */
-    flex-wrap: wrap;
-    border: 1px solid var(--border-soft);
-  }
-
-  .cta-strip span {
-    font-size: 0.95rem;
-  }
-
-  /* FOOTER */
-  footer {
-    background: #2F2A24;
-    color: #E6E0D8;
-    padding: 2.1rem 1.5rem 2.2rem;
-    margin-top: 1.1rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .footer-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 0.9fr));
-    gap: 1.75rem;
-    font-size: 0.85rem;
-  }
-
-  .footer-title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #F3EFEA;
-  }
-
-  .footer-links {
-    list-style: none;
-    display: grid;
-    gap: 0.25rem;
-  }
-
-  .footer-links a {
-    color: #E6E0D8;
-    opacity: 0.9;
-  }
-
-  .footer-links a:hover {
-    opacity: 1;
-    color: var(--accent-gold);
-  }
-
-  .footer-bottom {
-    max-width: 1120px;
-    margin: 1.3rem auto 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 0.9rem;
-    font-size: 0.78rem;
-    display: flex;
-    justify-content: space-between;
-    color: #CFC7BC;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav ul {
-      position: absolute;
-      inset: 54px 0 auto;
-      background: #3B2A1A;
-      padding: 0.85rem 1.5rem 1.1rem;
-      display: none;
-      flex-direction: column;
-      gap: 0.7rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    nav ul.show {
+    .sponsor-cta {
+      margin-top: 1.25rem;
       display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
-    nav ul a {
-      color: #F5E6D3;
-    }
-
-    .nav-toggle {
-      display: block;
-    }
-
-    .hero-inner {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-right {
-      order: -1;
-    }
-
-    main {
-      padding-inline: 1.3rem;
-    }
-
-    .two-column {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .tickets-grid,
-    .sponsors-grid,
+    /* MERCH */
     .merch-grid {
-      grid-template-columns: minmax(0, 1fr);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
     }
 
+    .merch-card {
+      background: var(--bg-cream);
+      border-radius: 1.1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1.05rem 1.15rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .merch-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .merch-image {
+      border-radius: 0.9rem;
+      height: 150px;
+      background: linear-gradient(135deg, #C89B3C, #6B7D5C);
+      margin-bottom: 0.4rem;
+    }
+
+    .merch-tag {
+      display: inline-flex;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(200, 155, 60, 0.12);
+      font-size: 0.75rem;
+      color: var(--accent-dark-gold);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .faq-item {
+      background: var(--bg-cream);
+      border-radius: 1rem;
+      border: 1px solid var(--border-soft);
+      padding: 0.95rem 1rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+    }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .faq-footer {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* SOCIAL & NEWSLETTER */
     .social-section {
-      grid-template-columns: minmax(0, 1fr);
+      background: linear-gradient(135deg, #EDE4D6, #F6F1EA);
+      border-radius: 1.4rem;
+      padding: 1.75rem 1.5rem;
+      color: var(--text-main);
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: center;
+      border: 1px solid var(--border-soft);
+    }
+
+    .social-links {
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .social-row {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      transition: transform 0.2s ease;
+    }
+
+    .social-row:hover {
+      transform: translateX(4px);
+    }
+
+    .social-logo {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: #fff;
+      padding: 4px;
+    }
+
+    .qr-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.5rem;
+    }
+
+    .qr-card {
+      border-radius: 0.85rem;
+      border: 1px dashed var(--border-soft);
+      padding: 0.65rem 0.8rem;
+      font-size: 0.8rem;
+      background: #fff;
+      color: var(--text-muted);
+    }
+
+    /* CTA STRIPS */
+    .cta-strip {
+      border-radius: 1.2rem;
+      padding: 1.1rem 1.25rem;
+      background: linear-gradient(135deg, #F6F1EA, #EFE6D7);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.9rem;
+      margin-top: 1.75rem;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      border: 1px solid var(--border-soft);
+    }
+
+    .cta-strip span {
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #2F2A24;
+      color: #E6E0D8;
+      padding: 2.1rem 1.5rem 2.2rem;
+      margin-top: 1.1rem;
+      position: relative;
+      z-index: 1;
     }
 
     .footer-inner {
-      grid-template-columns: minmax(0, 1fr);
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 0.9fr));
+      gap: 1.75rem;
+      font-size: 0.85rem;
     }
 
-    .schedule-item {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  @media (max-width: 500px) {
-    .hero {
-      padding-inline: 1.2rem;
+    .footer-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #F3EFEA;
     }
 
-    main {
-      padding-inline: 1.2rem;
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 0.25rem;
     }
-  }
-</style>
 
+    .footer-links a {
+      color: #E6E0D8;
+      opacity: 0.9;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--accent-gold);
+    }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 1.3rem auto 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 0.9rem;
+      font-size: 0.78rem;
+      display: flex;
+      justify-content: space-between;
+      color: #CFC7BC;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    /* ===========================
+       MOBILE UX OPTIMIZATIONS
+    =========================== */
+
+    @media (max-width: 900px) {
+
+      header {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      .nav-container {
+        padding: 0.75rem 1rem;
+      }
+
+      nav ul {
+        position: absolute;
+        inset: 58px 0 auto;
+        background: #3B2A1A;
+        padding: 1rem 1.25rem 1.25rem;
+        display: none;
+        flex-direction: column;
+        gap: 0.85rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li a {
+        font-size: 1rem;
+        padding: 0.45rem 0;
+        width: 100%;
+        display: block;
+      }
+
+      nav ul .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero {
+        padding: 2.25rem 1.25rem 2.75rem;
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero h1 {
+        font-size: 2.15rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-photo {
+        height: 220px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      main {
+        padding-inline: 1.3rem;
+      }
+
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.4rem;
+      }
+
+      .section-title {
+        font-size: 1.55rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .about-character img {
+        margin: 0 auto !important;
+        max-width: 180px;
+      }
+
+      .schedule-item {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0.9rem 1rem;
+        gap: 0.6rem;
+      }
+
+      .schedule-time {
+        font-size: 0.8rem;
+      }
+
+      .schedule-title {
+        font-size: 0.95rem;
+      }
+
+      .schedule-desc {
+        font-size: 0.85rem;
+      }
+
+      .tickets-grid,
+      .sponsors-grid,
+      .merch-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ticket-card {
+        padding: 1.2rem 1.2rem 1.3rem;
+      }
+
+      .ticket-card .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .ticket-icon-card {
+        display: none;
+      }
+
+      .sponsor-tile {
+        height: 90px;
+      }
+
+      .social-section {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.4rem 1.25rem;
+      }
+
+      .social-logo {
+        width: 32px;
+        height: 32px;
+      }
+
+      .cta-strip {
+        padding: 1rem 1.1rem;
+      }
+
+      .cta-strip span {
+        font-size: 0.9rem;
+      }
+
+      .cta-strip .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      footer {
+        padding: 1.9rem 1.25rem 2rem;
+      }
+
+      .footer-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.4rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: left;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-photo {
+        height: 200px;
+      }
+
+      .section-title {
+        font-size: 1.45rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="page-wrapper">
-  <header>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/texas%20logo.PNG?raw=true" alt="Arab Run Club Texas" class="logo-img" />
-        <div>ARC Texas Iftar 2026</div>
+  <div class="page-wrapper">
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/texas%20logo.PNG?raw=true" alt="Arab Run Club Texas" class="logo-img" />
+          <div>ARC Texas Iftar 2026</div>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#tickets" class="btn btn-primary">Get Tickets</a></li>
+          </ul>
+        </nav>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav>
-        <ul id="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#tickets">Tickets</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#tickets" class="btn btn-primary">Get Tickets</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="badge">
-          <span>Community Iftar</span><span>•</span><span>Ramadan 2026</span>
-        </div>
-        <h1>ARC Texas Iftar 2026</h1>
-        <p class="hero-subtitle">
-          An evening of community, culture, and connection near downtown Houston. Bringing together ARC chapters from across Texas. Join us for a warm welcoming hour, Iftar dinner, entertainment, and prayer, all in one unforgettable night.
-        </p>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="badge">
+            <span>Community Iftar</span><span>•</span><span>Ramadan 2026</span>
+          </div>
+          <h1>ARC Texas Iftar 2026</h1>
+          <p class="hero-subtitle">
+            An evening of community, culture, and connection near downtown Houston. Bringing together ARC chapters from across Texas. Join us for a warm welcoming hour, Iftar dinner, entertainment, and prayer, all in one unforgettable night.
+          </p>
 
-        <div class="hero-details">
-          <div class="pill">Saturday, March 14, 2026</div>
-          <div class="pill">Welcome from 5:30 PM • Iftar at 6:30 PM</div>
-          <div class="pill">Near Downtown Houston, TX</div>
+          <div class="hero-details">
+            <div class="pill">Saturday, March 14, 2026</div>
+            <div class="pill">Welcome from 5:30 PM • Iftar at 7:31 PM</div>
+            <div class="pill">Downtown Houston, TX</div>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="https://ticketscandy.com/e/arab-run-club-iftar-houston-austin-and-san-antonio-15376" class="btn btn-primary">Get Tickets</a>
+            <a href="https://forms.gle/jM8jn4h1LrrYBNY4A" class="btn btn-outline" target="_blank">Become a Sponsor Now</a>
+          </div>
+          <p class="hero-note">Limited capacity. Early bird pricing available. This event is 18+ and open to all backgrounds.</p>
         </div>
 
-        <div class="hero-ctas">
-          <a href="#tickets" class="btn btn-primary">Get Tickets</a>
-          <a href="https://forms.gle/jM8jn4h1LrrYBNY4A" class="btn btn-outline" target="_blank">Become a Sponsor</a>
-        </div>
-        <p class="hero-note">Limited capacity. Early bird pricing available. This event is 18+ and open to all backgrounds.
-        </p>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-card">
-          <div class="hero-photo"></div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-label">Guests</span>
-              <span class="stat-value">200+</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Program</span>
-              <span class="stat-value">Speakers • Entertainment • Activities</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Experience</span>
-              <span class="stat-value">Community • Faith • Food • Fun</span>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-photo"></div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-label">Guests</span>
+                <span class="stat-value">200+</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Program</span>
+                <span class="stat-value">Speakers • Entertainment • Activities</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Experience</span>
+                <span class="stat-value">Community • Faith • Food • Fun</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <main>
-    <!-- About -->
-    <section id="about" class="about-with-character">
-      <div class="section-header">
-        <div class="section-kicker">About</div>
-        <h2 class="section-title">An evening to break fast together</h2>
-        <p class="section-subtitle">
-          ARC Texas Iftar 2026 brings together members from Arab Run Club chapters in Houston, Austin, and San Antonio, along with friends of the community, for one unforgettable Ramadan night.
-        </p>
-      </div>
-      <div class="about-character">
-        <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-iftar.png?raw=true" alt="Iftar character" />
       </div>
     </section>
 
-    <div class="two-column">
-      <div>
-        <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">
-          Break fast at long communal tables, enjoy inspiring speakers and live entertainment, explore vendor booths, enter raffles, and connect with people who care about community, wellness, and giving back.
-        </p>
-        <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">
-          Whether you’re a student, young professional, creative, founder, or simply looking to experience Ramadan in a welcoming space, this 18+ night is designed to help you connect, reflect, and build lasting relationships, while supporting a great cause.
-        </p>
-        <ul class="list">
-          <li>
-            <span class="#list-icon">•</span>
-            <span>Share Iftar, pray together, and experience Ramadan in community.</span>
-          </li>
-          <li>
-            <span class="#list-icon">•</span>
-            <span>Network with ARC members and professionals from across Texas.</span>
-          </li>
-          <li>
-            <span class="#list-icon">•</span>
-            <span>Enjoy food, gifts, raffles, vendors, photo moments, and entertainment.</span>
-          </li>
-          <li>
-            <span class="#list-icon">•</span>
-            <span>Support meaningful charitable initiatives.</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Who you'll meet</h3>
-        <ul class="list">
-          <li>
-            <span class="#list-icon">•</span>
-            <span>Young professionals, founders, creatives, community leaders.</span>
-          </li>
-          <li>
-            <span class="#list-icon">•</span>
-            <span>University students and recent graduates looking to grow their network.</span>
-          </li>
-          <li>
-            <span class="#list-icon">•</span>
-            <span>Nonprofits, sponsors, and community organizations doing impactful work.</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cta-strip">
-      <span>Ready to join us this Ramadan?</span>
-      <a href="#tickets" class="btn btn-primary">Reserve your seat</a>
-    </div>
-
-<!-- Charity -->
-<section id="charity" class="charity-with-icon">
-  <div class="card charity-card">
-    <div class="section-header">
-      <div class="section-kicker">Charity Partner</div>
-      <h2 class="section-title">Supporting a Cause That Matters</h2>
-      <p class="section-subtitle">
-        This year’s ARC Texas Iftar Fundraiser is proud to partner with
-        <strong> Human Appeal</strong>, an organization dedicated to
-        helping Palestinian and Syrian displaced refugees in Lebanon.
-      </p>
-
-      <p class="section-body">
-        A large portion of all ticket sales and donations from this event will go directly
-        toward supporting their mission and making a meaningful impact in the lives
-        of those they serve.
-      </p>
-
-      <a href="https://www.instagram.com/reacheveryhuman"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn btn-primary">
-        Visit Their Instagram Page
-      </a>
-    </div>
-
-    <div class="charity-icon">
-      <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-money.PNG?raw=true" alt="Charity icon" />
-    </div>
-  </div>
-</section>
-
-    <!-- Schedule -->
-    <section id="schedule">
-      <div class="section-header">
-        <div class="section-kicker">Schedule</div>
-        <h2 class="section-title">Evening schedule</h2>
-        <p class="section-subtitle">
-          Arrive early, stay late — the night is structured, relaxed, and full of energy.
-        </p>
-      </div>
-
-      <div class="schedule-grid">
-        <div class="schedule-item">
-          <div class="schedule-time">5:30 PM</div>
-          <div>
-            <div class="schedule-title">Check-in & registration</div>
-            <div class="schedule-desc">
-              Doors open, wristband pickup, and photo backdrop.
-            </div>
-          </div>
+    <main>
+      <!-- About -->
+      <section id="about" class="about-with-character">
+        <div class="section-header">
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">An evening to break fast together</h2>
+          <p class="section-subtitle">
+            ARC Texas Iftar 2026 brings together members from Arab Run Club chapters in Austin, Houston, and San Antonio, along with friends of the community, for one unforgettable Ramadan night.
+          </p>
         </div>
-
-        <div class="schedule-item">
-          <div class="schedule-time">6:15 – 7:15 PM</div>
-          <div>
-            <div class="schedule-title">Welcome hour & networking</div>
-            <div class="schedule-desc">
-              Meet attendees from across Texas, sponsors, vendors, and community leaders.
-            </div>
-          </div>
+        <div class="about-character">
+          <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-iftar.png?raw=true" alt="Iftar character" />
         </div>
-
-        <div class="schedule-item">
-          <div class="schedule-time">7:31 – 8:45 PM</div>
-          <div>
-            <div class="schedule-title">Iftar & Dinner</div>
-            <div class="schedule-desc">
-              Break your fast with dates and water. Enjoy a specially curated, savory dining experience.
-            </div>
-          </div>
-        </div>
-
-        <div class="schedule-item">
-          <div class="schedule-time">8:50 – 9:15 PM</div>
-          <div>
-            <div class="schedule-title"> Giving & Supporting </div>
-            <div class="schedule-desc">
-              Participate in our live donation acution to help us reach our fundraising goal.
-            </div>
-          </div>
-        </div>
-
-        <div class="schedule-item">
-          <div class="schedule-time">9:15 – 9:40 PM</div>
-          <div>
-            <div class="schedule-title">Perfromance & entertainment</div>
-            <div class="schedule-desc">
-              Speakers, community spotlights, performances, raffles, and interactive moments.
-            </div>
-          </div>
-        </div>
-
-        <div class="schedule-item">
-          <div class="schedule-time">9:40 – 11:00PM</div>
-          <div>
-            <div class="schedule-title">Closing & hangout</div>
-            <div class="schedule-desc">
-              Final remarks, du’a, networking, and time to visit vendor booths.
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-
-    <!-- Venue -->
-    <section id="venue">
-      <div class="section-header">
-        <div class="section-kicker">Venue</div>
-        <h2 class="section-title">Near downtown Houston</h2>
-        <p class="section-subtitle">
-          Conveniently located with on-site parking and easy rideshare access.
-        </p>
-      </div>
+      </section>
 
       <div class="two-column">
         <div>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d777.8233127679551!2d-95.29622390227624!3d29.74346744707551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bd84ed066a87%3A0x9c079e3dbd36ad2!2sCopacabana%20Hall!5e0!3m2!1sen!2sus!4v1769230385974!5m2!1sen!2sus"
-            width="100%"
-            height="260"
-            style="border:0; border-radius: 1rem;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">
+            Break fast at long communal tables, enjoy inspiring speakers and live entertainment, explore vendor booths, enter raffles, and connect with people who care about community, wellness, and giving back.
+          </p>
+          <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">
+            Whether you’re a student, young professional, creative, founder, or simply looking to experience Ramadan in a welcoming space, this 18+ night is designed to help you connect, reflect, and build lasting relationships, while supporting a great cause.
+          </p>
+          <ul class="list">
+            <li>
+              <span>></span>
+              <span>Share Iftar, pray together, and experience Ramadan in community.</span>
+            </li>
+            <li>
+              <span>></span>
+              <span>Network with Arab Run Club members and professionals from across Texas.</span>
+            </li>
+            <li>
+              <span>></span>
+              <span>Enjoy food, gifts, raffles, vendors, photo moments, and entertainment.</span>
+            </li>
+            <li>
+              <span>></span>
+              <span>Support meaningful charitable initiatives.</span>
+            </li>
+          </ul>
         </div>
 
         <div class="card">
-          <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Venue details</h3>
-          <p style="font-size: 0.9rem; margin-bottom: 0.65rem;">
-            <strong>Venue name:</strong> Copacabana Hall, Houston, TX
-          </p>
-          <ul class="list" style="font-size: 0.9rem;">
+          <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Who you'll meet</h3>
+          <ul class="list">
             <li>
-              <span class="#list-icon">•</span>
-              <span>On-site and street parking with clear signage for arrival and check-in.</span>
+              <span>•</span>
+              <span>Young professionals, founders, creatives, content creators, community leaders.</span>
             </li>
             <li>
-              <span class="#list-icon">•</span>
-              <span>Dedicated prayer space with rugs and separate areas as needed.</span>
+              <span>•</span>
+              <span>University students and recent graduates looking to grow their network.</span>
             </li>
             <li>
-              <span class="#list-icon">•</span>
-              <span>Vendor booths and sponsor tables throughout the venue.</span>
+              <span>•</span>
+              <span>Nonprofits, sponsors, and community organizations doing impactful work.</span>
             </li>
           </ul>
         </div>
       </div>
-    </section>
 
-<!-- Tickets -->
-<section id="tickets">
-  <div class="section-header">
-    <div class="section-kicker">Tickets</div>
-    <h2 class="section-title">Tickets & registration</h2>
-    <p class="section-subtitle">
-      Reserve your spot before tickets sell out. Choose the option that best fits you or your group.
-      
-        Please Note: This event is 18+ and open to all backgrounds.
-    </p>
-  </div>
-
-  <div class="tickets-grid">
-    <div class="ticket-card">
-      <div class="ticket-label">Early Bird</div>
-
-      <div class="ticket-name">Individual ticket</div>
-      <div class="ticket-price">$65</div>
-      <div class="ticket-meta">Available until Early Bird tickets sell out</div>
-      <ul class="ticket-benefits">
-        <li>Seating in the main hall</li>
-        <li>Full Iftar dinner and evening program</li>
-        <li>Live entertainment and raffle entry</li>
-        <li>Access to all vendor vooths</li>
-      </ul>
-      <a href="#" class="btn btn-primary">Get early bird ticket</a>
-    </div>
-
-    <!-- Icon as third "ticket" -->
-    <div class="ticket-card ticket-icon-card">
-      <img
-        src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-meeting.PNG?raw=true"
-        alt="Tickets icon"
-      />
-    </div>
-  </div>
-
-  <div class="cta-strip">
-    <span>Have a question about ticket types or group bookings?</span>
-    <a href="#faq" class="btn btn-outline">View ticket FAQs</a>
-  </div>
-</section>
-
-    <!-- Sponsors -->
-    <section id="sponsors">
-      <div class="section-header">
-        <div class="section-kicker">Sponsors</div>
-        <h2 class="section-title">Sponsors & partners</h2>
-        <p class="section-subtitle">
-          ARC Texas Iftar 2026 is supported by local businesses, nonprofits, and community organizations. Here are our early sponsors:
-        </p>
-      </div>
-        
-      <div class="sponsors-grid">
-        <div class="sponsor-tile">
-          <img src="https://carwrecklawyertexas.com/wp-content/uploads/2023/10/cropped-TL_Logo_NoSlogan.png" alt="Takla Law" />
-        </div>
-        <div class="sponsor-tile">
-          <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/MASKAN-REALTY-GROUP-LOGO.png?raw=true" alt="Maskan Realty Group" />
-        </div>
-        <div class="sponsor-tile">
-          <img src="https://via.placeholder.com/120x60/6B7D5C/FFFFFF?text=LOGO" alt="Sponsor 3" />
-        </div>
+      <div class="cta-strip">
+        <span>Ready to join us this Ramadan?</span>
+        <a href="#tickets" class="btn btn-primary">Reserve your seat</a>
       </div>
 
-      <div class="sponsor-cta">
-        <p>
-          Want your brand or organization featured at ARC Texas Iftar 2026? Explore sponsorship options and community partner opportunities.
-        </p>
-        <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-          <a href="#contact" class="btn btn-primary">Talk to the team</a>
-        </div>
-      </div>
-    </section>
+      <!-- Charity -->
+      <section id="charity" class="charity-with-icon">
+        <div class="card charity-card">
+          <div class="section-header">
+            <div class="section-kicker">Charity Partner</div>
+            <h2 class="section-title">Supporting a Cause That Matters</h2>
+            <p class="section-subtitle">
+              This year’s ARC Texas Iftar Fundraiser is proud to partner with
+              <strong> Human Appeal</strong>, an organization dedicated to
+              helping Palestinian and Syrian displaced refugees in Lebanon.
+            </p>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="section-header">
-        <div class="section-kicker">FAQ</div>
-        <h2 class="section-title">Frequently asked questions</h2>
-        <p class="section-subtitle">
-          Find quick answers about tickets, dress code, family accommodations, and more.
-        </p>
-      </div>
+            <p class="section-body">
+              A large portion of all ticket sales and donations from this event will go directly
+              toward supporting their mission and making a meaningful impact in the lives
+              of those they serve.
+            </p>
 
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-question">Do I need to be Muslim/ Arab to attend?</div>
-          <div class="faq-answer">
-            Absolutely not! This event is open to everyone, regardless of background or faith. We welcome anyone interested in experiencing Iftar and connecting with our community.
+            <a href="https://www.instagram.com/reacheveryhuman"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary">
+              Visit Their Instagram Page
+            </a>
+          </div>
+
+          <div class="charity-icon">
+            <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-money.PNG?raw=true" alt="Charity icon" />
           </div>
         </div>
+      </section>
 
-        <div class="faq-item">
-          <div class="faq-question">What is included with my ticket?</div>
-          <div class="faq-answer">
-            Every ticket includes access to the venue, Iftar dinner, the full evening program, activities, and congregational prayer facilities.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Can I bring children?</div>
-          <div class="faq-answer">
-            To maintain the evening’s format and atmosphere, this event is for guests 18+ only.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">What should I wear?</div>
-          <div class="faq-answer">
-            We recommend modest, comfortable attire suitable for Ramadan gatherings. Smart casual or traditional Khaliji styles, such as thobes, abayas, or elegant festive wear, keeping the spirit of the occasion in mind.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Will there be a prayer space?</div>
-          <div class="faq-answer">
-            Yes! There will be a dedicated prayer area for both brothers and sisters. Feel free to bring a prayer rug.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">What if I have dietary restrictions?</div>
-          <div class="faq-answer">
-            Please contact us in advance. We’ll do our best to accommodate.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">Is parking available?</div>
-          <div class="faq-answer">
-            Yes, free on-site parking and street parking will be available.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-footer">
-        Still have questions? <a href="#contact" style="color:var(--accent-dark-gold); font-weight:500;">Contact the organizing team</a>.
-      </div>
-    </section>
-
-    <!-- Social / Newsletter -->
-    <section id="contact">
-      <div class="social-section">
-        <div>
-          <div class="section-kicker">Stay connected</div>
-          <h2 class="section-title" style="font-size:1.5rem; margin-bottom:0.5rem;">Follow us on social media</h2>
-          <p style="font-size:0.9rem; color:var(--text-muted); max-width:26rem; margin-bottom:1rem;">
-            Follow us for updates, announcements, and future events across Texas:
+      <!-- Schedule -->
+      <section id="schedule">
+        <div class="section-header">
+          <div class="section-kicker">Schedule</div>
+          <h2 class="section-title">Evening schedule</h2>
+          <p class="section-subtitle">
+            Arrive early, stay late. The night is structured, relaxed, and full of energy.
           </p>
+        </div>
 
-          <div class="social-links">
-            <a class="social-row"
-               href="https://www.instagram.com/ArabRunClub_Austin"
-               target="_blank" rel="noopener noreferrer">
-              <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/ATX.png?raw=true" alt="ARC Austin Logo" class="social-logo" />
-              <span>@ArabRunClub_Austin</span>
-            </a>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <div class="schedule-time">5:30 PM</div>
+            <div>
+              <div class="schedule-title">Check-in & registration</div>
+              <div class="schedule-desc">
+                Doors open, wristband pickup, and photo backdrop.
+              </div>
+            </div>
+          </div>
 
-            <a class="social-row"
-               href="https://www.instagram.com/ArabRunClubHouston"
-               target="_blank" rel="noopener noreferrer">
-              <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/HTX.png?raw=true" alt="ARC Houston Logo" class="social-logo" />
-              <span>@ArabRunClubHouston</span>
-            </a>
+          <div class="schedule-item">
+            <div class="schedule-time">6:15 – 7:15 PM</div>
+            <div>
+              <div class="schedule-title">Welcome hour & networking</div>
+              <div class="schedule-desc">
+                Meet attendees from across Texas, sponsors, vendors, and community leaders.
+              </div>
+            </div>
+          </div>
 
-            <a class="social-row"
-               href="https://www.instagram.com/ArabrunclubSanAntonio"
-               target="_blank" rel="noopener noreferrer">
-              <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/SATX.png?raw=true" alt="ARC San Antonio Logo" class="social-logo" />
-              <span>@ArabrunclubSanAntonio</span>
-            </a>
+          <div class="schedule-item">
+            <div class="schedule-time">7:31 – 8:45 PM</div>
+            <div>
+              <div class="schedule-title">Iftar & Dinner</div>
+              <div class="schedule-desc">
+                Break your fast with dates and water. Enjoy a specially curated, savory dining experience.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">8:50 – 9:15 PM</div>
+            <div>
+              <div class="schedule-title">Giving & Supporting</div>
+              <div class="schedule-desc">
+                Participate in our live donation auction to help us reach our fundraising goal.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">9:15 – 9:40 PM</div>
+            <div>
+              <div class="schedule-title">Performance & entertainment</div>
+              <div class="schedule-desc">
+                Speakers, community spotlights, performances, raffles, and interactive moments.
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">9:40 – 11:00 PM</div>
+            <div>
+              <div class="schedule-title">Closing & hangout</div>
+              <div class="schedule-desc">
+                Final remarks, du’a, networking, and time to visit vendor booths.
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Venue -->
+      <section id="venue">
+        <div class="section-header">
+          <div class="section-kicker">Venue</div>
+          <h2 class="section-title">Near downtown Houston</h2>
+          <p class="section-subtitle">
+            Conveniently located with on-site parking and easy rideshare access. Free Valet is also available.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d777.8233127679551!2d-95.29622390227624!3d29.74346744707551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bd84ed066a87%3A0x9c079e3dbd36ad2!2sCopacabana%20Hall!5e0!3m2!1sen!2sus!4v1769230385974!5m2!1sen!2sus"
+              width="100%"
+              height="260"
+              style="border:0; border-radius: 1rem;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Venue details</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 0.65rem;">
+              <strong>Venue name:</strong> Copacabana Hall, Houston, TX
+            </p>
+            <ul class="list" style="font-size: 0.9rem;">
+              <li>
+                <span>•</span>
+                <span>On-site and street parking with clear signage for arrival and check-in.</span>
+              </li>
+              <li>
+                <span>•</span>
+                <span>Dedicated prayer space with rugs and separate areas as needed.</span>
+              </li>
+              <li>
+                <span>•</span>
+                <span>Vendor booths and sponsor tables throughout the venue.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tickets -->
+      <section id="tickets">
+        <div class="section-header">
+          <div class="section-kicker">Tickets</div>
+          <h2 class="section-title">Tickets & registration</h2>
+          <p class="section-subtitle">
+            Reserve your spot before tickets sell out.
+            <br>
+            Please Note: This event is 18+ and open to all backgrounds.
+          </p>
+        </div>
+
+        <div class="tickets-grid">
+          <div class="ticket-card">
+            <div class="ticket-label">Early Bird</div>
+
+            <div class="ticket-name">Individual ticket</div>
+            <div class="ticket-price">$65</div>
+            <div class="ticket-meta">Available until Early Bird tickets sell out</div>
+            <ul class="ticket-benefits">
+              <li>Seating in the main hall</li>
+              <li>Full Iftar dinner and evening program</li>
+              <li>Live entertainment and raffle entry</li>
+              <li>Access to all vendor booths</li>
+            </ul>
+            <a href="https://ticketscandy.com/e/arab-run-club-iftar-houston-austin-and-san-antonio-15376" class="btn btn-primary">Get early bird ticket</a>
+          </div>
+
+          <!-- Decorative icon card (hidden on mobile) -->
+          <div class="ticket-card ticket-icon-card">
+            <img
+              src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-meeting.PNG?raw=true"
+              alt="Tickets icon"
+            />
+          </div>
+        </div>
+
+        <div class="cta-strip">
+          <span>Have a question about tickets, dress code, food, or parking?</span>
+          <a href="#faq" class="btn btn-outline">View ticket FAQs</a>
+        </div>
+      </section>
+
+      <!-- Sponsors -->
+      <section id="sponsors">
+        <div class="section-header">
+          <div class="section-kicker">Sponsors</div>
+          <h2 class="section-title">Sponsors & Partners</h2>
+          <p class="section-subtitle">
+            ARC Texas Iftar 2026 is supported by local businesses, nonprofits, and community organizations. Here are our early sponsors:
+          </p>
+        </div>
+
+        <div class="sponsors-grid">
+          <div class="sponsor-tile">
+            <img src="https://carwrecklawyertexas.com/wp-content/uploads/2023/10/cropped-TL_Logo_NoSlogan.png" alt="Takla Law" />
+          </div>
+          <div class="sponsor-tile">
+            <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/MASKAN-REALTY-GROUP-LOGO.png?raw=true" alt="Maskan Realty Group" />
+          </div>
+          <div class="sponsor-tile">
+            <img src="https://via.placeholder.com/120x60/6B7D5C/FFFFFF?text=LOGO" alt="Sponsor 3" />
+          </div>
+        </div>
+
+        <div class="sponsor-cta">
+          <p>
+            Want your brand or organization featured at ARC Texas Iftar 2026? Explore sponsorship options and community partner opportunities.
+          </p>
+          <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-primary">Talk to the team</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="section-header">
+          <div class="section-kicker">FAQ</div>
+          <h2 class="section-title">Frequently asked questions</h2>
+          <p class="section-subtitle">
+            Find quick answers about tickets, dress code, family accommodations, and more.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">Do I need to be Muslim/ Arab to attend?</div>
+            <div class="faq-answer">
+              No, Absolutely Not! This event is open to everyone, regardless of background or faith. We welcome anyone interested in experiencing Iftar and connecting with our community.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">What is included with my ticket?</div>
+            <div class="faq-answer">
+              Every ticket includes access to the venue, Iftar dinner, the full evening program, activities, vendors, and congregational prayer facilities.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Can I bring children?</div>
+            <div class="faq-answer">
+              To maintain the evening’s format and atmosphere, this event is for guests 18+ only.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">What should I wear?</div>
+            <div class="faq-answer">
+              We recommend modest, comfortable attire suitable for Ramadan gatherings. Smart casual or traditional Khaliji styles, such as thobes, abayas, or elegant festive wear, keeping the spirit of the occasion in mind.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Will there be a prayer space?</div>
+            <div class="faq-answer">
+              Yes! There will be a dedicated prayer area for both brothers and sisters. Feel free to bring a prayer rug.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">What if I have dietary restrictions?</div>
+            <div class="faq-answer">
+              Please contact us in advance. We’ll do our best to accommodate.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Is parking available?</div>
+            <div class="faq-answer">
+              Yes, Free on-site parking, street parking, and complimentary valet service will be available.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-footer">
+          Still have questions? <a href="#contact" style="color:var(--accent-dark-gold); font-weight:500;">Contact the organizing team</a>.
+        </div>
+      </section>
+
+      <!-- Social / Newsletter -->
+      <section id="contact">
+        <div class="social-section">
+          <div>
+            <div class="section-kicker">Stay connected</div>
+            <h2 class="section-title" style="font-size:1.5rem; margin-bottom:0.5rem;">Follow us on social media</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted); max-width:26rem; margin-bottom:1rem;">
+              Follow us for updates, announcements, and future events across Texas:
+            </p>
+
+            <div class="social-links">
+              <a class="social-row"
+                 href="https://www.instagram.com/ArabRunClub_Austin"
+                 target="_blank" rel="noopener noreferrer">
+                <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/ATX.png?raw=true" alt="ARC Austin Logo" class="social-logo" />
+                <span>@ArabRunClub_Austin</span>
+              </a>
+
+              <a class="social-row"
+                 href="https://www.instagram.com/ArabRunClubHouston"
+                 target="_blank" rel="noopener noreferrer">
+                <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/HTX.png?raw=true" alt="ARC Houston Logo" class="social-logo" />
+                <span>@ArabRunClubHouston</span>
+              </a>
+
+              <a class="social-row"
+                 href="https://www.instagram.com/ArabrunclubSanAntonio"
+                 target="_blank" rel="noopener noreferrer">
+                <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/SATX.png?raw=true" alt="ARC San Antonio Logo" class="social-logo" />
+                <span>@ArabrunclubSanAntonio</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-title">ARC Texas Iftar 2026</div>
+          <p>
+            A community-led Ramadan gathering uniting ARC chapters across Texas for a night of faith, food, entertainment, and friendship.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">Location</div>
+          <ul class="footer-links">
+            <li>7107 Navigation Blvd, Houston, TX 77011</li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-title">ARC Texas Iftar 2026</div>
-      <p>
-        A community-led Ramadan gathering uniting ARC chapters across Texas for a night of faith, food, and friendship.
-      </p>
-    </div>
+      <div class="footer-bottom">
+        <span>© 2026 ARC Iftar. All rights reserved.</span>
+        <span style="font-size: 0.78rem; color: #CFC7BC;">
+          Disclaimer: This event is independently hosted. All donations go directly to Reach Every Human. Tickets and vendor fees are not tax-deductible. All sales are final. Sponsorships and vendor participation are for promotional purposes only and no business outcomes are guaranteed. Attendance is at your own risk. Organizers are not liable for loss, injury, or damages.
+        </span>
+      </div>
+    </footer>
 
-    <div>
-      <div class="footer-title">Location</div>
-      <ul class="footer-links">
-        <li>7107 Navigation Blvd, Houston, TX 77011</li>
-      </ul>
-    </div>
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        document.body.classList.toggle('nav-open');
+      });
+    </script>
   </div>
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom" style="flex-direction: column; gap: 0.5rem; text-align: left;">
-    <span>© 2026 ARC Iftar. All rights reserved.</span>
-    <span style="font-size: 0.78rem; color: #CFC7BC;">
-      Disclaimer: This event is independently hosted. All donations go directly to Reach Every Human. Tickets and vendor fees are not tax-deductible. All sales are final. Sponsorships and vendor participation are for promotional purposes only and no business outcomes are guaranteed. Attendance is at your own risk. Organizers are not liable for loss, injury, or damages.
-    </span>
-  </div>
-</footer>
-
-
-  <script>
-    // Toggle mobile nav
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.getElementById("nav-menu");
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-    });
-  </script>
-
-</div>
-
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  toggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-</script>
 </body>
 </html>
