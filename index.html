@@ -24,12 +24,7 @@
       --white: #ffffff;
       --icon-url: url("https://github.com/ARCruns/ARC-iftar-2026/blob/main/character-camel.PNG?raw=true");
     }
-    
-    html {
-    scroll-padding-top: 60px; /* adjust to your header height */
-    scroll-behavior: smooth;
-    }
-    
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -112,6 +107,12 @@
       backdrop-filter: blur(12px);
       background: #3B2A1A;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      
+    }
+    
+    html {
+    scroll-padding-top: 40px; /* adjust to your header height */
+    scroll-behavior: smooth;
     }
 
     .nav-container {
@@ -214,12 +215,12 @@
     .hero {
     background: linear-gradient(180deg, #F9F5EF 0%, #F3ECE3 100%);
     padding: 3.25rem 1.5rem 4rem;
-    margin-top: 45px; /* <-- Added space for fixed header */
+    margin-top: 55px; 
     position: relative;
     z-index: 1;
    }
 
-  
+
     .hero-inner {
       max-width: 1120px;
       margin: 0 auto;
@@ -342,7 +343,18 @@
     section {
       margin-bottom: 0.1rem;
       margin-top: 0.1rem;
+      scroll-margin-top: 80px;
     }
+    
+    section {
+      scroll-margin-top: 50px; /* header height */
+    }
+    
+    html {
+    scroll-padding-top: 50px; /* adjust to match your header height */
+    scroll-behavior: smooth;  /* optional: makes scrolling smooth */
+    }
+
 
     section:not(#charity)::after {
       content: "";
@@ -1428,9 +1440,9 @@
               <li>Live entertainment and raffle entry</li>
               <li>Access to all vendor booths</li>
             </ul>
-            <a href="https://ticketscandy.com/e/arab-run-club-iftar-houston-austin-and-san-antonio-15376" class="btn btn-primary" target="_blank">Get early bird ticket</a>
+            <a href="https://ticketscandy.com/e/arab-run-club-iftar-houston-austin-and-san-antonio-15376" class="btn btn-primary">Get early bird ticket</a>
           </div>
-          
+
           <!-- Decorative icon card (hidden on mobile) -->
           <div class="ticket-card ticket-icon-card">
             <img
@@ -1464,7 +1476,7 @@
             <img src="https://github.com/ARCruns/ARC-iftar-2026/blob/main/MASKAN-REALTY-GROUP-LOGO.png?raw=true" alt="Maskan Realty Group" />
           </div>
           <div class="sponsor-tile">
-            <img src="#"  alt="Sponsor 3" />
+            <img src="https://via.placeholder.com/120x60/6B7D5C/FFFFFF?text=LOGO" alt="Sponsor 3" />
           </div>
         </div>
 
@@ -1549,7 +1561,7 @@
         <div class="social-section">
           <div>
             <div class="section-kicker">Stay connected</div>
-            <h2 class="section-title" style="font-size:1.5rem; margin-bottom:0.5rem;">Connect with us on social media</h2>
+            <h2 class="section-title" style="font-size:1.5rem; margin-bottom:0.5rem;">Follow us on social media</h2>
             <p style="font-size:0.9rem; color:var(--text-muted); max-width:26rem; margin-bottom:1rem;">
               Follow us for updates, announcements, and future events across Texas:
             </p>
