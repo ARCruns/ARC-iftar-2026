@@ -537,84 +537,108 @@
       max-width: 18rem;
     }
 
-    /* TICKETS */
-    .tickets-grid {
-      display: grid;
-      gap: 1.35rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  /* TICKETS */
+  .tickets-grid {
+    display: grid;
+    gap: 1.35rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
-    .ticket-card {
-      background: var(--bg-cream);
-      border-radius: 1.1rem;
-      border: 1px solid var(--border-soft);
-      padding: 1.3rem 1.4rem 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
+  .ticket-card {
+    background: var(--bg-cream);
+    border-radius: 1.1rem;
+    border: 1px solid var(--border-soft);
+    padding: 1.3rem 1.4rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
 
-    .ticket-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
+  .ticket-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
 
-    .ticket-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--accent-dark-gold);
-      font-weight: 600;
-    }
+  .ticket-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-dark-gold);
+    font-weight: 600;
+  }
 
-    .ticket-name {
-      font-weight: 600;
-      font-size: 1.05rem;
-      margin-bottom: 0.15rem;
-      color: var(--text-main);
-    }
+  .ticket-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.15rem;
+    color: var(--text-main);
+  }
 
-    .ticket-price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-      color: var(--text-main);
-    }
+  .ticket-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+  }
 
-    .ticket-meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+  .ticket-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
 
-    .ticket-benefits {
-      list-style: disc;
-      padding-left: 1rem;
-      margin: 0;
-      display: grid;
-      gap: 0.4rem;
-      font-size: 0.9rem;
-      margin-bottom: 0.7rem;
-    }
+  .ticket-benefits {
+    list-style: disc;
+    padding-left: 1rem;
+    margin: 0;
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+  }
 
-    .ticket-benefits li::before {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: inline-block;
-      margin-right: 0.4rem;
-      vertical-align: middle;
-    }
+  .ticket-benefits li::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
 
-    .ticket-card .btn {
-      margin-top: auto;
+  .ticket-card .btn {
+    margin-top: auto;
+  }
+  
+  /* Tickets layout */
+    .tickets-with-icon {
+      position: relative;
     }
-
-    /* Hide icon-only ticket card on mobile */
-    .ticket-icon-card {
+    
+    .tickets-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Icon positioning */
+    .tickets-icon {
+      position: absolute;
+      right: 2rem;
+      bottom: 1.5rem;
+      pointer-events: none;
+    }
+    
+    .tickets-icon img {
+      width: 140px;
+      max-width: 28vw;
+      opacity: 0.95;
+    }
+    
+    /* Icon card styling */
+    .ticket-icon-only {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -623,11 +647,26 @@
       box-shadow: none;
       padding: 0;
     }
-
-    .ticket-icon-card img {
+    
+    .ticket-icon-only img {
       width: 120px;
       height: auto;
       max-width: 100%;
+    }
+
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .tickets-icon {
+        position: static;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+    
+      .tickets-icon img {
+        width: 110px;
+      }
     }
 
     /* Charity */
